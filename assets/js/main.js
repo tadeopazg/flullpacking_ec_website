@@ -214,7 +214,7 @@
             const productSlider = new Swiper(".product-slider", {
                 spaceBetween: 30,
                 speed: 1300,
-                loop: true,
+                loop: false,
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: false,
@@ -455,7 +455,7 @@
             const categorySlider = new Swiper(".category-slider", {
                 spaceBetween: 20,
                 speed: 1300,
-                loop: true,
+                loop: false,
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: false,

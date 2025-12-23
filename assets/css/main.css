@@ -14,9 +14,9 @@ Version: 1.0.0
   --black: #000;
   --white: #fff;
   --theme:#FF6633;
-  --theme-2:#ff6633;
+  --theme-2:#F18A00;
   --theme-3:#57437B;
-  --header:#010F1C;
+  --header:#AAAC24;
   --text:#55585B;
   --border:#7676764d;
   --border-2: #BDBDBD;
@@ -171,7 +171,7 @@ Version: 1.0.0
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 body {
-  font-family: "Jost", sans-serif;
+  font-family: "Galano-Grotesque", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
@@ -209,7 +209,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Jost", sans-serif;
+ font-family: "Galano-Grotesque", sans-serif;
   margin: 0px;
   padding: 0;
   color: var(--header);
@@ -3172,7 +3172,7 @@ span {
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
-  font-family: "Jost", sans-serif;
+ font-family: "Galano-Grotesque", sans-serif;
 }
 .header-main .main-menu ul li:hover > a {
   color: var(--theme);
@@ -4774,7 +4774,7 @@ span {
 }
 .hero-1 .hero-content .theme-btn {
   background-color: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
   color: var(--white);
   margin-bottom: 30px;
 }
@@ -6109,7 +6109,7 @@ span {
   content: attr(data-text-preloader);
   left: 0;
   opacity: 0;
-  font-family: "Jost", sans-serif;
+ font-family: "Galano-Grotesque", sans-serif;
   position: absolute;
   top: -3px;
   transform: rotateY(-90deg);
@@ -6994,7 +6994,7 @@ input.main-search-input::placeholder {
   font-size: 18px;
   font-weight: 400;
   color: var(--theme);
-  font-family: "Jost", sans-serif;
+ font-family: "Galano-Grotesque", sans-serif;
   margin-bottom: 15px;
   text-transform: capitalize;
   display: inline-block;
@@ -9632,7 +9632,7 @@ input.main-search-input::placeholder {
   color: #1B1F2A;
   font-size: 20px;
   text-transform: capitalize;
-  font-family: "Jost", sans-serif;
+ font-family: "Galano-Grotesque", sans-serif;
   font-weight: 600;
 }
 .cart-list-area .common-table .price-usd {
@@ -10213,7 +10213,7 @@ input.main-search-input::placeholder {
 }
 .testimonial-wrapper .testimonial-content {
   padding: 42px 50px;
-  background-color: var(--header);
+  background-color: var(--theme-2);
   position: relative;
   height: 100%;
 }
