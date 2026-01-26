@@ -3965,6 +3965,37 @@ Fancybox
 	transition: all 0.5s ease;
 }
 
+/* --- Personalización Pilares Fullpacking --- */
+
+/* 1. Quitamos el cuadro gris y evitamos que desaparezca en hover */
+.pq-fancy-box.pq-style-2 .pq-fancy-box-icon {
+    background: transparent !important; /* Quita el cuadro gris */
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+    opacity: 1 !important; /* Evita que desaparezca */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* 2. Forzamos que en hover NO se oculte (anulamos el estilo del template) */
+.pq-fancy-box.pq-style-2:hover .pq-fancy-box-icon {
+    opacity: 1 !important;
+    height: auto !important;
+}
+
+/* 3. Efecto de color para el SVG */
+.pq-fancy-box.pq-style-2 img.custom-pilar-icon {
+    transition: all 0.4s ease;
+}
+
+/* 4. Al hacer hover en la card, el SVG se vuelve blanco */
+.pq-fancy-box.pq-style-2:hover img.custom-pilar-icon {
+    filter: brightness(0) invert(1);
+}
+
 .pq-fancy-box.pq-style-2 .pq-btn-container {
 	width: 80px;
 	height: 80px;
