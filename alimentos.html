@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullpacking - Sector de Alimentos</title>
+    <title>Fullpacking - Sectores</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.png">
     <!-- Bootstrap CSS -->
@@ -184,21 +184,6 @@
                                         </li>
                                         <li class="menu-item  current-menu-item menu-item-has-children">
                                             <a href="#">Sectores</a>
-                                            <i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children  current-menu-item">
-                                                    <a href="alimentos.html">Sector Alimentos</a>
-                                                </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="agroindustria.html">Sector Agroindustria</a>
-                                                </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="floricua.html">Sector Florícua</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <a href="hoteleria.html">Sector Hotelero</a>
-                                                </li>
-                                            </ul>
                                         </li>
                                         <li class="menu-item">
                                             <a href="contacto.html">Contacto</a>
@@ -232,14 +217,14 @@
                 <div class="col-lg-12">
                     <nav aria-label="breadcrumb">
                         <div class="pq-breadcrumb-title">
-                            <h1>Sector de Alimentos</h1>
+                            <h1>Sectores</h1>
                         </div>
                         <div class="pq-breadcrumb-container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a href="index.html"><i class="fas fa-home mr-2"></i>Inicio</a>
                                 </li>
-                                <li class="breadcrumb-item active">Sector de Alimentos</li>
+                                <li class="breadcrumb-item active">Sectores</li>
                             </ol>
                         </div>
                     </nav>
@@ -252,59 +237,116 @@
     <!-- Service Single -->
     <section class="service-single">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-4">
-                <div class="pq-service-sidebar">
-                    <div class="widget">
-                        <div class="menu-service-menu-container">
-                            <ul id="menu-service-menu" class="menu">
-                                <li class="menu-item current-menu-item">
-                                    <a href="alimentos.html">Sector de Alimentos</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="agroindustria.html">Sector Agroindustria</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="floricua.html">Sector Florícola</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="hoteleria.html">Sector Hotelero</a>
-                                </li>                                    
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-xl-8 mt-5 mt-xl-0 pq-grey-bg">
-                <div class="map-interactive-wrapper pq-mb-30">
-                    <img src="images/service-single/mapa.jpg" class="img-fluid w-100" alt="Mapa de Ecuador">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="pq-service-content">
                     
-                    <div class="client-hotspot" style="top: 25%; left: 45%;" onclick="togglePopup(this)">
-                        <img src="images/clientes/logo.png" class="client-logo-thumb" alt="Cliente">
-                        <div class="client-popup">
-                            <p><strong>Socio Estratégico</strong><br>Soluciones en empaques para el sector alimentos.</p>
-                            <span class="popup-arrow"></span>
+                    <div class="row pq-mb-45">
+                        <div class="col-lg-12 text-center">
+                            <h3 class="mb-3">Cobertura Nacional y Soluciones Multisectoriales</h3>
                         </div>
                     </div>
 
-                    <div class="client-hotspot" style="top: 55%; left: 30%;" onclick="togglePopup(this)">
-                        <img src="images/clientes/logo.png" class="client-logo-thumb" alt="Cliente">
-                        <div class="client-popup">
-                            <p><strong>Distribuidor Aliado</strong><br>Presencia técnica y logística especializada.</p>
-                            <span class="popup-arrow"></span>
+                    <div class="map-interactive-wrapper pq-mb-45" style="position: relative; background: #f9f9f9; border-radius: 15px; overflow: hidden; padding: 20px; border: 1px solid #eee;">
+                        <div style="position: relative;">
+                            <img src="images/service-single/mapa.jpg" class="img-fluid w-100" alt="Mapa de Ecuador Fullpacking" style="border-radius: 10px;">
+                            
+                            <div class="client-hotspot" style="position: absolute; top: 25%; left: 45%; cursor: pointer;" onclick="togglePopup(this)">
+                                <img src="images/clientes/logo.svg" class="client-logo-thumb" alt="Cliente" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--primary-color); background: white;">
+                                <div class="client-popup" style="display: none; position: absolute; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 200px; z-index: 10; bottom: 50px; left: -80px;">
+                                    <p style="margin: 0; font-size: 13px; color: #333;"><strong>Socio Estratégico</strong><br>Soluciones en empaques para el sector alimentos.</p>
+                                </div>
+                            </div>
+
+                            <div class="client-hotspot" style="position: absolute; top: 55%; left: 30%; cursor: pointer;" onclick="togglePopup(this)">
+                                <img src="images/clientes/logo.svg" class="client-logo-thumb" alt="Cliente" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--primary-color); background: white;">
+                                <div class="client-popup" style="display: none; position: absolute; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 200px; z-index: 10; bottom: 50px; left: -80px;">
+                                    <p style="margin: 0; font-size: 13px; color: #333;"><strong>Distribuidor Aliado</strong><br>Presencia técnica y logística especializada.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="row pq-mb-45">
+                        <div class="col-lg-12 text-center">
+                            <p class="lead" style="color: var(--primary-color); font-weight: 500; font-size: 1.2rem;">
+                                Ofrecemos a diversos sectores una propuesta de innovación en el proceso de empaque mediante tecnología responsable con el medio ambiente y con altos estándares de calidad.
+                            </p>
+                            <p class="mt-3">
+                                Nuestra capacidad operativa nos permite atender las demandas de empaque en <strong>todo el territorio nacional</strong>. Gracias a nuestra infraestructura logística, garantizamos que la excelencia de Fullpacking llegue a cada rincón del país, asegurando tiempos de entrega competitivos y un soporte técnico especializado para cada industria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row pq-mb-45">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="pq-icon-box pq-style-5" style="background: var(--primary-color); padding: 30px; border-radius: 10px; display: flex; align-items: center; min-height: 140px;">
+                                <div class="pq-icon" style="flex: none;">
+                                    <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <div style="
+                                            width: 30px; 
+                                            height: 30px; 
+                                            background-color: var(--primary-color); 
+                                            -webkit-mask: url('fonts/newflaticon/sectores_clave.svg') no-repeat center;
+                                            mask: url('fonts/newflaticon/sectores_clave.svg') no-repeat center;
+                                            -webkit-mask-size: contain;
+                                            mask-size: contain;
+                                        "></div>
+                                    </div>
+                                </div>
+                                <div class="pq-icon-box-content" style="margin-left: 20px;">
+                                    <h5 class="pq-icon-box-title" style="color: white !important; margin: 0;">Sectores Clave</h5>
+                                    <p class="pq-icon-box-description" style="color: rgba(255,255,255,0.9) !important; margin: 5px 0 0 0;">Atendemos con éxito a la industria alimentaria, farmacéutica, agroindustrial y hotelera.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                            <div class="pq-icon-box pq-style-5" style="background: var(--primary-color); padding: 30px; border-radius: 10px; display: flex; align-items: center; min-height: 140px;">
+                                <div class="pq-icon" style="flex: none;">
+                                    <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <div style="
+                                            width: 30px; 
+                                            height: 30px; 
+                                            background-color: var(--primary-color); 
+                                            -webkit-mask: url('fonts/newflaticon/suministro.svg') no-repeat center;
+                                            mask: url('fonts/newflaticon/suministro.svg') no-repeat center;
+                                            -webkit-mask-size: contain;
+                                            mask-size: contain;
+                                        "></div>
+                                    </div>
+                                </div>
+                                <div class="pq-icon-box-content" style="margin-left: 20px;">
+                                    <h5 class="pq-icon-box-title" style="color: white !important; margin: 0;">Suministro Garantizado</h5>
+                                    <p class="pq-icon-box-description" style="color: rgba(255,255,255,0.9) !important; margin: 5px 0 0 0;">Nuestra red de distribución está diseñada para abastecer a plantas industriales en todo el país.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <blockquote style="border-left: 5px solid var(--primary-color); font-style: italic; background: #f4f4f4; padding: 25px; margin-bottom: 30px;">
+                                "Estar donde nuestros clientes nos necesitan es parte de nuestra gratitud con el mercado que confía en nosotros."
+                            </blockquote>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="pq-list-check">
+                                        <li><i class="ion ion-checkmark-circled"></i> <span>Tecnología responsable con el medio ambiente.</span></li>
+                                        <li><i class="ion ion-checkmark-circled"></i> <span>Altos estándares de calidad internacional.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="pq-list-check">
+                                        <li><i class="ion ion-checkmark-circled"></i> <span>Asesoría personalizada en empaques.</span></li>
+                                        <li><i class="ion ion-checkmark-circled"></i> <span>Soporte técnico a nivel nacional.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <h3 class="mb-2" style="color: var(--primary-color);">Nuestra Cobertura Nacional</h3>
-                <p>En <strong>Fullpacking</strong>, nuestra pasión por los empaques no conoce fronteras dentro de Ecuador. Desde nuestra evolución en 2017, hemos consolidado una red logística que permite que nuestras soluciones de alta calidad y biodegradables lleguen a las empresas más exigentes del país.</p>
-                
-                <blockquote style="border-left: 5px solid var(--primary-color); font-style: italic;">
-                    "Estar donde nuestros clientes nos necesitan es parte de nuestra gratitud con el mercado que confía en nosotros."
-                </blockquote>
-                
-                <p class="pq-mb-45">Contamos con presencia activa en los principales polos industriales, asegurando que cada empaque cumpla con el estándar de conservación y resistencia que su producto merece.</p>
             </div>
         </div>
     </div>
@@ -313,154 +355,110 @@
 
     <!-- Footer -->
     <footer id="pq-footer">
-        <div class="pq-footer-style-1">
-            <div class="pq-footer-top">
-                <div class="pq-footer-bottom-list">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="pq-footer-img">
-                                    <img src="images/logos/footer-logo.png" class="pq-footer-logo" alt="textica-footer-logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-4 p-0">
-                                        <div class="pq-footer-items">
-                                            <i class="ti-location-pin"></i>
-                                            <div class="pq-footer-items-info">
-                                                <h4>address</h4>
-                                                <span>Themeforest, Envato HQ</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 p-0">
-                                        <div class="pq-footer-items">
-                                            <i class="ti-mobile"></i>
-                                            <div class="pq-footer-items-info">
-                                                <h4>call Us On</h4>
-                                                <a href="tel:+180045647824">
-                                                    <span>+1800-001-6555</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 p-0">
-                                        <div class="pq-footer-items">
-                                            <i class="ti-email"></i>
-                                            <div class="pq-footer-items-info">
-                                                <h4>Email Us</h4>
-                                                <a href="mailto:info@peacefulqode.com">
-                                                    <span>info@peacefulqode.com</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="pq-footer-style-1">
+        <div class="pq-footer-top">
+            <div class="pq-footer-bottom-list">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="widget">
-                                <h4 class="footer-title">About Textica</h4>
-                                <p>It helps designers plan out where the content will sit, the content to be written and approved.</p>
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="pq-footer-img">
+                                <img src="images/logos/footer-logo.svg" class="pq-footer-logo" alt="logo">
                             </div>
                         </div>
-                        <div class="col-xl-3  col-md-6">
-                            <div class="widget">
-                                <h4 class="footer-title">Textica Services</h4>
-                                <div class="menu-textile-service-container">
-                                    <ul id="menu-textile-service" class="menu">
-                                        <li class="menu-item">
-                                            <a href="fabric-printing.html">Fabric Printing</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="we-design-fabric.html">We Design Fabric</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="stich-fabric.html">Stich Fabric</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="engineering.html">Engineering</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3  col-md-6">
-                            <div class="widget">
-                                <h4 class="footer-title">Usefull Links</h4>
-                                <div class="menu-useful-links-container">
-                                    <ul id="menu-useful-links" class="menu">
-                                        <li class="menu-item">
-                                            <a href="about-us.html">About Us</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="our-services.html">Our Services</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="our-team.html">Our Team</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="our-pricing.html">Our Pricing</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3  col-md-6">
-                            <div class="widget">
-                                <div class="pq-subscribe">
-                                    <div class="pq-subscribe-details">
-                                        <h4 class="footer-title">our newsletter</h4>
-                                        <p>Sign up for the latest deals products news and more from us.</p>
+                        <div class="col-lg-9">
+                            <div class="row"> 
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <div class="pq-footer-items" style="display: flex; align-items: flex-start; height: 100%;">
+                                        <i class="ti-location-pin"></i>
+                                        <div class="pq-footer-items-info">
+                                            <h4>Ubicación</h4>
+                                            <span style="font-size: 13px; line-height: 1.4;">Av. Galo Plaza Lasso #63-229 y Nazacota Puento. Quito</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="pq-subscribe-from">
-                                    <form class="pq-sign-up-form">
-                                        <input type="email" name="EMAIL" placeholder="Your email address" class="form-control">
-                                        <input class="submit" type="submit" value="Sign up">
-                                        <i class="ion-ios-paperplane"></i>
-                                    </form>
+                                <div class="col-md-6">
+                                    <div class="pq-footer-items" style="display: flex; align-items: flex-start; height: 100%;">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <div class="pq-footer-items-info">
+                                            <h4>WhatsApp</h4>
+                                            <a href="https://wa.me/593989010972">
+                                                <span style="font-size: 14px;">+593 98 901 0972</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pq-copyright-footer">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 text-center text-md-start">
-                            <div class="pq-footer-social">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="widget">
+                            <h4 class="footer-title">FullPacking</h4>
+                            <p>Líderes en mercado ecuatoriano de soluciones de empaque industrial y comercial.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="widget">
+                            <h4 class="footer-title">Sectores</h4>
+                            <div class="menu-textile-service-container">
+                                <ul id="menu-textile-service" class="menu">
+                                    <li class="menu-item"><a href="alimentos.html">Alimentos</a></li>
+                                    <li class="menu-item"><a href="agroindustria.html">Agroindustria</a></li>
+                                    <li class="menu-item"><a href="floricua.html">Florícua</a></li>
+                                    <li class="menu-item"><a href="hoteleria.html">Hotelería</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <span class="pq-copyright"> Proudly Powered By Textica</span>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="widget">
+                            <h4 class="footer-title">Mapa del Sitio</h4>
+                            <div class="menu-useful-links-container">
+                                <ul id="menu-useful-links" class="menu">
+                                    <li class="menu-item"><a href="nosotros.html">Quiénes Somos</a></li>
+                                    <li class="menu-item"><a href="catalogo.html">Catálogo</a></li>
+                                    <li class="menu-item"><a href="contacto.html">Contáctanos</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="pq-copyright-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <div class="pq-footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <span class="pq-copyright">®Fullpacking 2026 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </footer>
     <!-- Footer -->
 
-    <!-- Back To Top -->
+    <!-- Whats App Bubble -->
     <div id="back-to-top">
-        <a class="top" id="top" href="#top">
-            <i class="ion-ios-arrow-up"></i>
+        <a class="top" id="top" href="https://wa.me/+593989010972" target="_blank">
+           <i class="ion-social-whatsapp"></i>
         </a>
     </div>
-    <!-- Back To Top -->
+    <!-- Whats App Bubble -->
 
     <!--jquery js-->
     <script src="js/jquery.min.js"></script>
@@ -482,30 +480,35 @@
     <script src="js/simplebar.min.js"></script>
     <!--custom js-->
     <script src="js/custom.js"></script>
+
     <script>
+/**
+ * Control de Popups del Mapa Fullpacking
+ */
 function togglePopup(element) {
-    // Si el punto ya está activo, lo cerramos
+    // Si el punto que clickeamos ya está activo, lo cerramos
     if (element.classList.contains('active')) {
         element.classList.remove('active');
     } else {
-        // Cerramos cualquier otro popup abierto primero
-        document.querySelectorAll('.client-hotspot').forEach(el => {
-            el.classList.remove('active');
+        // Cerramos cualquier otro punto abierto para que no se traslapen
+        document.querySelectorAll('.client-hotspot').forEach(hotspot => {
+            hotspot.classList.remove('active');
         });
-        // Abrimos el actual
+        // Activamos el actual
         element.classList.add('active');
     }
 }
 
-// Opcional: Cerrar popup si se hace clic fuera del mapa
+// Cerrar el popup automáticamente si el usuario hace clic en cualquier otro lado de la pantalla
 document.addEventListener('click', function(event) {
     if (!event.target.closest('.client-hotspot')) {
-        document.querySelectorAll('.client-hotspot').forEach(el => {
-            el.classList.remove('active');
+        document.querySelectorAll('.client-hotspot').forEach(hotspot => {
+            hotspot.classList.remove('active');
         });
     }
 });
 </script>
+
 </body>
 
 </html>
