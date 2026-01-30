@@ -7102,3 +7102,31 @@ Custom CSS
 .pq-background-rightinfo {
     padding: 20px !important;
 }
+
+.pq-service-div-custom {
+    background-color: rgba(170, 172, 36, 0.5) !important;
+    min-height: 550px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.industry-info {
+    display: none;
+}
+
+.industry-info.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.service-verticle-slider .item.slick-current .pq-service-title,
+.service-verticle-slider .item:hover .pq-service-title {
+    background-color: #AAAC24 !important;
+    color: #ffffff !important;
+}
