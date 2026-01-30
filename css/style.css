@@ -5786,19 +5786,28 @@ Background Images
     opacity: 0.3;
 }
 
-.pq-bg-img-2:before{
+.pq-bg-img-2 {
+    position: relative;
+    background: #fdfdfd; /* Un color base claro por si la imagen tarda en cargar */
+}
+
+.pq-bg-img-2:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background-images/2.jpg);
+    /* Asegúrate de que la ruta sea correcta según tu carpeta */
+    background-image: url('../images/background-images/textura-clara-bg.jpg'); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.1;
+    /* Quitamos fixed si quieres que la textura se mueva con el scroll de la sección, 
+       o lo dejamos si prefieres efecto parallax */
+    background-attachment: scroll; 
+    opacity: 0.15; /* Subí un poquito la opacidad para que se note la textura */
+    pointer-events: none;
 }
 
 .pq-bg-img-3:before{
@@ -7013,4 +7022,83 @@ Custom CSS
 /* Ajuste opcional para que el texto de descripción tenga un mínimo de altura */
 .pq-contact-box-description {
     min-height: 50px; 
+}
+
+/* Reducir el espacio de la sección entera */
+.slides {
+    padding-top: 40px !important;   /* Ajusta según necesites */
+    padding-bottom: 40px !important;
+}
+
+/* Reducir el margen del título para que el catálogo suba */
+.slides .pq-section-title {
+    margin-bottom: 20px !important;
+}
+
+/* Controlar la altura de los items del catálogo */
+.pq-background-img-item {
+    height: 450px !important; /* Altura sugerida, por defecto suelen ser 600px+ */
+    min-height: 400px;
+}
+
+/* Asegurar que la imagen se adapte al nuevo tamaño sin deformarse */
+.pq-background-leftimg img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajuste opcional para el número y el título si quedan muy grandes */
+.pq-background-img-number {
+    font-size: 40px !important;
+    line-height: 50px !important;
+}
+
+.pq-background-img-title {
+    font-size: 24px !important;
+}
+
+/* --- AJUSTES DE ALTURA PARA SECCIÓN CATÁLOGO --- */
+
+/* 1. Reducimos el padding de la sección general */
+.slides {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    min-height: auto !important;
+}
+
+/* 2. Forzamos la altura de los contenedores internos */
+.pq-background-img,
+.pq-background-img-inner {
+    height: 450px !important; /* Cambia este valor para que sea más o menos alta */
+    min-height: 450px !important;
+}
+
+/* 3. Ajustamos cada item del catálogo */
+.pq-background-img-item {
+    height: 100% !important;
+    min-height: auto !important;
+}
+
+/* 4. Aseguramos que la imagen no empuje el contenedor hacia abajo */
+.pq-background-leftimg, 
+.pq-background-leftimg img {
+    height: 100% !important;
+    max-height: 450px !important;
+    object-fit: cover;
+}
+
+/* 5. Mantenemos el texto en negro (como pediste antes) */
+.pq-section-main-title, 
+.pq-background-img-title {
+    color: #272b36 !important;
+}
+
+.slides h5 {
+    color: #444444 !important;
+}
+
+/* 6. Ajuste del botón para que no quede muy pegado al borde */
+.pq-background-rightinfo {
+    padding: 20px !important;
 }
