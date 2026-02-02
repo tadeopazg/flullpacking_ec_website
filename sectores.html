@@ -224,8 +224,28 @@
     </div>
     <!-- Breadcrumb -->
 
-    <!--Servicios Nuevo-->
-   <section class="service-single">
+    <section class="service-single">
+  <style>
+    /* Forzamos a que la lista no tenga puntos predeterminados */
+    ul.pq-list-check {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    /* Eliminamos cualquier adorno extra (::before) que ponga la plantilla */
+    ul.pq-list-check li::before {
+        content: none !important;
+        display: none !important;
+        border: none !important;
+    }
+    /* Aseguramos que el LI no tenga estilo de lista */
+    ul.pq-list-check li {
+        list-style-type: none !important;
+        padding-left: 0 !important;
+        margin-bottom: 10px;
+    }
+  </style>
+
   <div class="container">
     <div class="row">
       <h4 class="mb-5 text-center">EMPAQUES QUE SE ADAPTAN A CADA INDUSTRIA</h4>
@@ -235,24 +255,43 @@
           <div class="widget">
             <div class="menu-service-menu-container">
               <ul id="menu-service-menu" class="menu nav nav-tabs border-0 flex-column" role="tablist">
+                
                 <li class="menu-item">
-                  <a class="nav-link active" id="alimentos-tab" data-bs-toggle="tab" href="#alimentos" role="tab">Alimentos</a>
+                  <a class="nav-link active" id="alimentos-tab" data-bs-toggle="tab" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+                    Alimentos
+                  </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a class="nav-link" id="agro-tab" data-bs-toggle="tab" href="#agro" role="tab">Agroindustria</a>
+                  <a class="nav-link" id="agro-tab" data-bs-toggle="tab" href="#agro" role="tab" aria-controls="agro" aria-selected="false">
+                    Agroindustria
+                  </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a class="nav-link" id="floricolas-tab" data-bs-toggle="tab" href="#floriculas" role="tab">Florícolas</a>
+                  <a class="nav-link" id="floricolas-tab" data-bs-toggle="tab" href="#floricolas" role="tab" aria-controls="floricolas" aria-selected="false">
+                    Florícolas
+                  </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a class="nav-link" id="hoteleria-tab" data-bs-toggle="tab" href="#hoteleria" role="tab">Hotelería</a>
+                  <a class="nav-link" id="hoteleria-tab" data-bs-toggle="tab" href="#hoteleria" role="tab" aria-controls="hoteleria" aria-selected="false">
+                    Hotelería
+                  </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a class="nav-link" id="aerolineas-tab" data-bs-toggle="tab" href="#aerolineas" role="tab">Aerolíneas</a>
+                  <a class="nav-link" id="aerolineas-tab" data-bs-toggle="tab" href="#aerolineas" role="tab" aria-controls="aerolineas" aria-selected="false">
+                    Aerolíneas
+                  </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a class="nav-link" id="retail-tab" data-bs-toggle="tab" href="#retail" role="tab">Retail</a>
+                  <a class="nav-link" id="retail-tab" data-bs-toggle="tab" href="#retail" role="tab" aria-controls="retail" aria-selected="false">
+                    Retail
+                  </a>
                 </li>
+
               </ul>
             </div>
           </div>
@@ -262,156 +301,155 @@
       <div class="col-xl-8 mt-5 mt-xl-0 pq-grey-bg p-4">
         <div class="tab-content" id="sectoresTabContent">
           
-          <div class="tab-pane fade show active" id="alimentos" role="tabpanel">
+          <div class="tab-pane fade show active" id="alimentos" role="tabpanel" aria-labelledby="alimentos-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/restaurant.jpg" class="img-fluid rounded" alt="Alimentos" />
+                  <img decoding="async" loading="lazy" src="images/service-single/restaurant.jpg" class="img-fluid rounded" alt="Alimentos" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Alimentos</h3>
-                <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos, cuidando tanto el producto como la experiencia del consumidor.</p>
+                <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos.</p>
                 <ul class="pq-list-check">
-                  <li>Comida preparada</li>
-                  <li>Snacks y productos fritos</li>
-                  <li>Servicio para llevar y delivery</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Comida preparada</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Snacks y productos fritos</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio para llevar y delivery</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotiza Ahora</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="agro" role="tabpanel">
+          <div class="tab-pane fade" id="agro" role="tabpanel" aria-labelledby="agro-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/agroindustria.jpg" class="img-fluid rounded" alt="Agroindustria" />
+                  <img decoding="async" loading="lazy" src="images/service-single/agroindustria.jpg" class="img-fluid rounded" alt="Agroindustria" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Agroindustria</h3>
-                <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos, cuidando tanto el producto como la experiencia del consumidor.</p>
+                <p>Soluciones robustas para el manejo poscosecha y transporte. Protegemos tu producción desde el campo hasta el consumidor final.</p>
                 <ul class="pq-list-check">
-                  <li>Productos agrícolas</li>
-                  <li>Alimentos procesados y en refrigeración</li>
-                  <li>Distribución y comercialización</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Productos agrícolas</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Alimentos procesados</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Distribución y comercialización</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotiza Ahora</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="floricolas" role="tabpanel">
+          <div class="tab-pane fade" id="floricolas" role="tabpanel" aria-labelledby="floricolas-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/floricula.jpg" class="img-fluid rounded" alt="Florícolas" />
+                  <img decoding="async" loading="lazy" src="images/service-single/floricula.jpg" class="img-fluid rounded" alt="Florícolas" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Florícolas</h3>
-                <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos.</p>
+                <p>Empaques especializados que cuidan la delicadeza de cada flor durante la exportación. Mantenemos la hidratación y estructura perfecta.</p>
                 <ul class="pq-list-check">
-                  <li>Empaque y transporte</li>
-                  <li>Presentación comercial</li>
-                  <li>Logística y exportación USA 🇺🇸 - Unión Europea 🇪🇺</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Empaque y transporte</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Presentación comercial</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Logística y exportación</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotizar Flores</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="hoteleria" role="tabpanel">
+          <div class="tab-pane fade" id="hoteleria" role="tabpanel" aria-labelledby="hoteleria-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/hotel.jpg" class="img-fluid rounded" alt="Hotelería" />
+                  <img decoding="async" loading="lazy" src="images/service-single/hotel.jpg" class="img-fluid rounded" alt="Hotelería" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Hotelería</h3>
-                <p>Empaques elegantes, funcionales y personalizados que elevan la experiencia del huésped. Ideales para servicio de alimentos, room service y eventos, alineados con políticas de sostenibilidad y calidad premium.</p>
+                <p>Empaques elegantes y funcionales que elevan la experiencia del huésped. Ideales para servicio de alimentos y eventos.</p>
                 <ul class="pq-list-check">
-                  <li>Room service</li>
-                  <li>Eventos y catering</li>
-                  <li>Servicio de alimentos</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Room service</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Eventos y catering</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio de alimentos</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotizar Hotelería</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="aerolineas" role="tabpanel">
+          <div class="tab-pane fade" id="aerolineas" role="tabpanel" aria-labelledby="aerolineas-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/aerolineas.jpg" class="img-fluid rounded" alt="Aerolíneas" />
+                  <img decoding="async" loading="lazy" src="images/service-single/aerolineas.jpg" class="img-fluid rounded" alt="Aerolíneas" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Aerolíneas</h3>
-                <p>Empaques diseñados para operaciones, que priorizan higiene, ligereza y eficiencia logística. Soluciones pensadas para la contención en cabina y protocolos de servicio.</p>
+                <p>Empaques diseñados para operaciones, priorizando higiene, ligereza y eficiencia logística para contención en cabina.</p>
                 <ul class="pq-list-check">
-                  <li>Soluciones de contención para cabina</li>
-                  <li>Empaques para operaciones a bordo</li>
-                  <li>Elementos desechables para protocolos de servicio</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Soluciones para cabina</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Operaciones a bordo</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Protocolos de servicio</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotizar Aerolíneas</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="retail" role="tabpanel">
+          <div class="tab-pane fade" id="retail" role="tabpanel" aria-labelledby="retail-tab">
             <div class="row">
               <div class="col-md-5">
                 <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/retail.jpg" class="img-fluid rounded" alt="Retail" />
+                  <img decoding="async" loading="lazy" src="images/service-single/retail.jpg" class="img-fluid rounded" alt="Retail" style="width:100%; object-fit:cover;">
                 </div>
               </div>
               <div class="col-md-7 mt-4 mt-md-0">
                 <h3 class="mb-3">Retail</h3>
-                <p>Empaques que combinan funcionalidad y presentación, pensados para exhibición, protección y posicionamiento de marca en punto de venta y e-commerce.</p>
+                <p>Empaques que combinan funcionalidad y presentación para exhibición, protección y posicionamiento de marca.</p>
                 <ul class="pq-list-check">
-                  <li>Marcas comerciales</li>
-                  <li>Puntos de venta</li>
-                  <li>Empaques para artículos comerciales</li>
-                  <li>Entrega en punto de venta y e-commerce</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Puntos de venta</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Artículos comerciales</li>
+                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>E-commerce</li>
                 </ul>
                 <div class="widget mt-4">
-                  <div class="wp-block-button">
-                    <a class="pq-button pq-button-flat wp-block-button__link wp-element-button" href="contacto.html">Cotiza Ahora</a>
-                  </div>
+                  <a class="pq-button pq-button-flat" href="contacto.html">
+                      <span class="pq-button-text">Cotizar Retail</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-        </div> </div>
+        </div> 
+      </div>
     </div>
   </div>
 </section>
-    <!-- Fin de Servicios Nuevo-->
 
     <!-- Service Single -->
     <section class="service-single">
@@ -735,162 +773,114 @@
     <!-- Service Single -->
 
     <!-- Footer -->
-    <footer id="pq-footer">
-      <div class="pq-footer-style-1">
-        <div class="pq-footer-top">
-          <div class="pq-footer-bottom-list">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-3">
-                  <div class="pq-footer-img">
-                    <img
-                      src="images/logos/footer-logo.svg"
-                      class="pq-footer-logo"
-                      alt="logo"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-9">
-                  <div class="row">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <div
-                        class="pq-footer-items"
-                        style="
-                          display: flex;
-                          align-items: flex-start;
-                          height: 100%;
-                        "
-                      >
-                        <i class="ti-location-pin"></i>
-                        <div class="pq-footer-items-info">
-                          <h4>Ubicación</h4>
-                          <span style="font-size: 13px; line-height: 1.4"
-                            >Av. Galo Plaza Lasso #63-229 y Nazacota Puento.
-                            Quito</span
-                          >
+   <footer id="pq-footer">
+        <div class="pq-footer-style-1">
+            <div class="pq-footer-top">
+                <div class="pq-footer-bottom-list">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3">
+                                <div class="pq-footer-img">
+                                    <img src="/images/logos/footer-logo.svg" class="pq-footer-logo" alt="logo">
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row"> 
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <div class="pq-footer-items" style="display: flex; align-items: flex-start; height: 100%;">
+                                            <i class="ti-location-pin"></i>
+                                            <div class="pq-footer-items-info">
+                                                <h4>Ubicación</h4>
+                                                <span style="font-size: 13px; line-height: 1.4;">Av. Galo Plaza Lasso #63-229 y Nazacota Puento. Quito</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="pq-footer-items" style="display: flex; align-items: flex-start; height: 100%;">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <div class="pq-footer-items-info">
+                                                <h4>WhatsApp</h4>
+                                                <a href="https://wa.me/593989010972">
+                                                    <span style="font-size: 14px;">+593 98 901 0972</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <div
-                        class="pq-footer-items"
-                        style="
-                          display: flex;
-                          align-items: flex-start;
-                          height: 100%;
-                        "
-                      >
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="pq-footer-items-info">
-                          <h4>WhatsApp</h4>
-                          <a href="https://wa.me/593989010972">
-                            <span style="font-size: 14px"
-                              >+593 98 901 0972</span
-                            >
-                          </a>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="widget">
+                                <h4 class="footer-title">FullPacking</h4>
+                                <p>Líderes en el mercado ecuatoriano de soluciones de empaque industrial y comercial. Innovación y compromiso ecológico.</p>
+                            </div>
                         </div>
-                      </div>
+                        
+                        <div class="col-xl-4 col-md-6">
+                            <div class="widget">
+                                <h4 class="footer-title">Explora</h4>
+                                <div class="menu-useful-links-container">
+                                    <ul class="menu">
+                                        <li class="menu-item"><a href="/index.html">Inicio</a></li>
+                                        <li class="menu-item"><a href="/nosotros.html">Quiénes Somos</a></li>
+                                        <li class="menu-item"><a href="/catalogo.html">Nuestro Catálogo</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6">
+                            <div class="widget">
+                                <h4 class="footer-title">De Interés</h4>
+                                <div class="menu-useful-links-container">
+                                    <ul class="menu">
+                                        <li class="menu-item"><a href="/sectores.html">Sectores Industriales</a></li>
+                                        <li class="menu-item"><a href="/contacto.html">Contáctanos</a></li>
+                                        <li class="menu-item"><a href="https://wa.me/593989010972" target="_blank">Solicitar Cotización</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-4 col-md-6">
-                <div class="widget">
-                  <h4 class="footer-title">FullPacking</h4>
-                  <p>
-                    Líderes en mercado ecuatoriano de soluciones de empaque
-                    industrial y comercial.
-                  </p>
+            <div class="pq-copyright-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start">
+                            <div class="pq-footer-social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/fullpacking" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/fullpackingbio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/fullpacking/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.tiktok.com/@fullpackingbio" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <span class="pq-copyright">®Fullpacking 2026 </span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-xl-4 col-md-6">
-                <div class="widget">
-                  <h4 class="footer-title">Sectores</h4>
-                  <div class="menu-textile-service-container">
-                    <ul id="menu-textile-service" class="menu">
-                      <li class="menu-item">
-                        <a href="alimentos.html">Alimentos</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="agroindustria.html">Agroindustria</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="floricua.html">Florícua</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="hoteleria.html">Hotelería</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-md-6">
-                <div class="widget">
-                  <h4 class="footer-title">Mapa del Sitio</h4>
-                  <div class="menu-useful-links-container">
-                    <ul id="menu-useful-links" class="menu">
-                      <li class="menu-item">
-                        <a href="nosotros.html">Quiénes Somos</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="catalogo.html">Catálogo</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="contacto.html">Contáctanos</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-
-        <div class="pq-copyright-footer">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center text-md-start">
-                <div class="pq-footer-social">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                <span class="pq-copyright">®Fullpacking 2026 </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
     <!-- Footer -->
 
-    <!-- Whats App Bubble -->
-    <div id="back-to-top">
-      <a
-        class="top"
-        id="top"
-        href="https://wa.me/+593989010972"
-        target="_blank"
-      >
+    <!-- Whatsapp Float -->
+    <div id="whatsapp-float">
+    <a class="whatsapp-btn" href="https://wa.me/593989010972" target="_blank">
         <i class="ion-social-whatsapp"></i>
-      </a>
-    </div>
-    <!-- Whats App Bubble -->
+    </a>
+</div>
+<!-- Whatsapp Float -->
+ 
 
     <!--jquery js-->
     <script src="js/jquery.min.js"></script>

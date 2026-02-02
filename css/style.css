@@ -5779,7 +5779,7 @@ Background Images
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background-images/1.png);
+    background-image: url(../images/background-images/textura-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 98% auto;
@@ -7129,4 +7129,64 @@ Custom CSS
 .service-verticle-slider .item:hover .pq-service-title {
     background-color: #AAAC24 !important;
     color: #ffffff !important;
+}
+ul.pq-list-check {
+    list-style: none; /* Quitamos el punto por defecto */
+    padding-left: 0;
+}
+
+ul.pq-list-check li {
+    position: relative;
+    padding-left: 20px; /* Espacio para el punto */
+    margin-bottom: 8px;
+}
+
+ul.pq-list-check li::before {
+    content: "•"; /* El carácter del punto */
+    color: #ff0000; /* CAMBIA ESTO por el color de tu marca */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+#whatsapp-float .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    margin: 0px;
+    color: #fff; /* texto blanco */
+    background: #25D366; /* verde WhatsApp */
+    z-index: 9999; /* Z-index alto para que esté sobre todo */
+    border: none;
+    
+    /* CAMBIOS DE TAMAÑO */
+    font-size: 40px;   /* Icono más grande */
+    width: 70px;       /* Ancho más grande */
+    height: 70px;      /* Alto más grande */
+    line-height: 70px; /* Centrado vertical (mismo valor que height) */
+    
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra un poco más marcada */
+    animation: whatsapp-bounce 2s infinite; /* Animación mantenida */
+    transition: all 0.3s ease;
+}
+
+#whatsapp-float .whatsapp-btn:hover {
+    background: #128C7E; /* verde más oscuro */
+    transform: scale(1.1); /* Efecto lupa al pasar el mouse */
+}
+
+/* Animación de rebote renombrada */
+@keyframes whatsapp-bounce {
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 45px;
+    }
+    100% {
+        bottom: 30px;
+    }
 }
