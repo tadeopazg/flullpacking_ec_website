@@ -118,7 +118,6 @@ h6 {
 	font-family: var(--title-fonts);
 	color: var(--dark-color);
 	font-style: normal;
-	text-transform: capitalize;
 	font-weight: 700;
 	margin: 0;
 	-ms-word-wrap: break-word;
