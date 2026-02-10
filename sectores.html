@@ -30,15 +30,11 @@
   </head>
 
   <body>
-    <!-- Loading -->
     <div id="pq-loading">
       <div id="pq-loading-center">
         <img src="images/logos/loader.png" alt="Cargando..." />
       </div>
     </div>
-    <!-- Loading -->
-
-    <!-- Header -->
     <div class="pq-background-overlay"></div>
     <div class="pq-sidebar">
       <div class="pq-close-btn">
@@ -196,9 +192,6 @@
         </div>
       </div>
     </header>
-    <!-- Header -->
-
-    <!-- Breadcrumb -->
     <div class="pq-breadcrumb">
       <div class="container">
         <div class="row align-items-center">
@@ -222,237 +215,234 @@
         </div>
       </div>
     </div>
-    <!-- Breadcrumb -->
+    <section class="service-single" style="padding-bottom: 0px;">
+        <style>
+            /* Forzamos a que la lista no tenga puntos predeterminados */
+            ul.pq-list-check {
+                list-style: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            /* Eliminamos cualquier adorno extra (::before) que ponga la plantilla */
+            ul.pq-list-check li::before {
+                content: none !important;
+                display: none !important;
+                border: none !important;
+            }
+            /* Aseguramos que el LI no tenga estilo de lista */
+            ul.pq-list-check li {
+                list-style-type: none !important;
+                padding-left: 0 !important;
+                margin-bottom: 10px;
+            }
+        </style>
 
-    <section class="service-single">
-  <style>
-    /* Forzamos a que la lista no tenga puntos predeterminados */
-    ul.pq-list-check {
-        list-style: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    /* Eliminamos cualquier adorno extra (::before) que ponga la plantilla */
-    ul.pq-list-check li::before {
-        content: none !important;
-        display: none !important;
-        border: none !important;
-    }
-    /* Aseguramos que el LI no tenga estilo de lista */
-    ul.pq-list-check li {
-        list-style-type: none !important;
-        padding-left: 0 !important;
-        margin-bottom: 10px;
-    }
-  </style>
+        <div class="container">
+            <div class="row">
+            <h4 class="mb-5 text-center">EMPAQUES QUE SE ADAPTAN A CADA INDUSTRIA</h4>
+            
+            <div class="col-xl-4">
+                <div class="pq-service-sidebar">
+                <div class="widget">
+                    <div class="menu-service-menu-container">
+                    <ul id="menu-service-menu" class="menu nav nav-tabs border-0 flex-column" role="tablist">
+                        
+                        <li class="menu-item">
+                        <a class="nav-link active" id="alimentos-tab" data-bs-toggle="tab" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+                            Alimentos
+                        </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                        <a class="nav-link" id="agro-tab" data-bs-toggle="tab" href="#agro" role="tab" aria-controls="agro" aria-selected="false">
+                            Agroindustria
+                        </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                        <a class="nav-link" id="floricolas-tab" data-bs-toggle="tab" href="#floricolas" role="tab" aria-controls="floricolas" aria-selected="false">
+                            Florícolas
+                        </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                        <a class="nav-link" id="hoteleria-tab" data-bs-toggle="tab" href="#hoteleria" role="tab" aria-controls="hoteleria" aria-selected="false">
+                            Hotelería
+                        </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                        <a class="nav-link" id="aerolineas-tab" data-bs-toggle="tab" href="#aerolineas" role="tab" aria-controls="aerolineas" aria-selected="false">
+                            Aerolíneas
+                        </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                        <a class="nav-link" id="retail-tab" data-bs-toggle="tab" href="#retail" role="tab" aria-controls="retail" aria-selected="false">
+                            Retail
+                        </a>
+                        </li>
 
-  <div class="container">
-    <div class="row">
-      <h4 class="mb-5 text-center">EMPAQUES QUE SE ADAPTAN A CADA INDUSTRIA</h4>
-      
-      <div class="col-xl-4">
-        <div class="pq-service-sidebar">
-          <div class="widget">
-            <div class="menu-service-menu-container">
-              <ul id="menu-service-menu" class="menu nav nav-tabs border-0 flex-column" role="tablist">
-                
-                <li class="menu-item">
-                  <a class="nav-link active" id="alimentos-tab" data-bs-toggle="tab" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
-                    Alimentos
-                  </a>
-                </li>
-                
-                <li class="menu-item">
-                  <a class="nav-link" id="agro-tab" data-bs-toggle="tab" href="#agro" role="tab" aria-controls="agro" aria-selected="false">
-                    Agroindustria
-                  </a>
-                </li>
-                
-                <li class="menu-item">
-                  <a class="nav-link" id="floricolas-tab" data-bs-toggle="tab" href="#floricolas" role="tab" aria-controls="floricolas" aria-selected="false">
-                    Florícolas
-                  </a>
-                </li>
-                
-                <li class="menu-item">
-                  <a class="nav-link" id="hoteleria-tab" data-bs-toggle="tab" href="#hoteleria" role="tab" aria-controls="hoteleria" aria-selected="false">
-                    Hotelería
-                  </a>
-                </li>
-                
-                <li class="menu-item">
-                  <a class="nav-link" id="aerolineas-tab" data-bs-toggle="tab" href="#aerolineas" role="tab" aria-controls="aerolineas" aria-selected="false">
-                    Aerolíneas
-                  </a>
-                </li>
-                
-                <li class="menu-item">
-                  <a class="nav-link" id="retail-tab" data-bs-toggle="tab" href="#retail" role="tab" aria-controls="retail" aria-selected="false">
-                    Retail
-                  </a>
-                </li>
-
-              </ul>
+                    </ul>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
+
+            <div class="col-xl-8 mt-5 mt-xl-0 pq-grey-bg p-4">
+                <div class="tab-content" id="sectoresTabContent">
+                
+                <div class="tab-pane fade show active" id="alimentos" role="tabpanel" aria-labelledby="alimentos-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/restaurant.jpg" class="img-fluid rounded" alt="Alimentos" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Alimentos</h3>
+                        <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Comida preparada</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Snacks y productos fritos</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio para llevar y delivery</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotiza Ahora</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="agro" role="tabpanel" aria-labelledby="agro-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/agroindustria.jpg" class="img-fluid rounded" alt="Agroindustria" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Agroindustria</h3>
+                        <p>Soluciones robustas para el manejo poscosecha y transporte. Protegemos tu producción desde el campo hasta el consumidor final.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Productos agrícolas</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Alimentos procesados</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Distribución y comercialización</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotiza Ahora</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="floricolas" role="tabpanel" aria-labelledby="floricolas-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/floricula.jpg" class="img-fluid rounded" alt="Florícolas" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Florícolas</h3>
+                        <p>Empaques especializados que cuidan la delicadeza de cada flor durante la exportación. Mantenemos la hidratación y estructura perfecta.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Empaque y transporte</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Presentación comercial</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Logística y exportación</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotizar Flores</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="hoteleria" role="tabpanel" aria-labelledby="hoteleria-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/hotel.jpg" class="img-fluid rounded" alt="Hotelería" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Hotelería</h3>
+                        <p>Empaques elegantes y funcionales que elevan la experiencia del huésped. Ideales para servicio de alimentos y eventos.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Room service</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Eventos y catering</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio de alimentos</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotizar Hotelería</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="aerolineas" role="tabpanel" aria-labelledby="aerolineas-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/aerolineas.jpg" class="img-fluid rounded" alt="Aerolíneas" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Aerolíneas</h3>
+                        <p>Empaques diseñados para operaciones, priorizando higiene, ligereza y eficiencia logística para contención en cabina.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Soluciones para cabina</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Operaciones a bordo</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Protocolos de servicio</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotizar Aerolíneas</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="retail" role="tabpanel" aria-labelledby="retail-tab">
+                    <div class="row">
+                    <div class="col-md-5">
+                        <div class="widget">
+                        <img decoding="async" loading="lazy" src="images/service-single/retail.jpg" class="img-fluid rounded" alt="Retail" style="width:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <h3 class="mb-3">Retail</h3>
+                        <p>Empaques que combinan funcionalidad y presentación para exhibición, protección y posicionamiento de marca.</p>
+                        <ul class="pq-list-check">
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Puntos de venta</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Artículos comerciales</li>
+                        <li><i class="ion-android-checkmark-circle text-primary me-2"></i>E-commerce</li>
+                        </ul>
+                        <div class="widget mt-4">
+                        <a class="pq-button pq-button-flat" href="contacto.html">
+                            <span class="pq-button-text">Cotizar Retail</span>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div> 
+            </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="col-xl-8 mt-5 mt-xl-0 pq-grey-bg p-4">
-        <div class="tab-content" id="sectoresTabContent">
-          
-          <div class="tab-pane fade show active" id="alimentos" role="tabpanel" aria-labelledby="alimentos-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/restaurant.jpg" class="img-fluid rounded" alt="Alimentos" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Alimentos</h3>
-                <p>Empaques con altos estándares de seguridad alimentaria, resistencia a grasas y humedad, ideales para alimentos calientes y fríos. Cumplimos normativas de higiene, trazabilidad y contacto directo con alimentos.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Comida preparada</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Snacks y productos fritos</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio para llevar y delivery</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotiza Ahora</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="agro" role="tabpanel" aria-labelledby="agro-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/agroindustria.jpg" class="img-fluid rounded" alt="Agroindustria" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Agroindustria</h3>
-                <p>Soluciones robustas para el manejo poscosecha y transporte. Protegemos tu producción desde el campo hasta el consumidor final.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Productos agrícolas</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Alimentos procesados</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Distribución y comercialización</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotiza Ahora</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="floricolas" role="tabpanel" aria-labelledby="floricolas-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/floricula.jpg" class="img-fluid rounded" alt="Florícolas" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Florícolas</h3>
-                <p>Empaques especializados que cuidan la delicadeza de cada flor durante la exportación. Mantenemos la hidratación y estructura perfecta.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Empaque y transporte</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Presentación comercial</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Logística y exportación</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotizar Flores</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="hoteleria" role="tabpanel" aria-labelledby="hoteleria-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/hotel.jpg" class="img-fluid rounded" alt="Hotelería" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Hotelería</h3>
-                <p>Empaques elegantes y funcionales que elevan la experiencia del huésped. Ideales para servicio de alimentos y eventos.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Room service</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Eventos y catering</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Servicio de alimentos</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotizar Hotelería</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="aerolineas" role="tabpanel" aria-labelledby="aerolineas-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/aerolineas.jpg" class="img-fluid rounded" alt="Aerolíneas" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Aerolíneas</h3>
-                <p>Empaques diseñados para operaciones, priorizando higiene, ligereza y eficiencia logística para contención en cabina.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Soluciones para cabina</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Operaciones a bordo</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Protocolos de servicio</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotizar Aerolíneas</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="retail" role="tabpanel" aria-labelledby="retail-tab">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="widget">
-                  <img decoding="async" loading="lazy" src="images/service-single/retail.jpg" class="img-fluid rounded" alt="Retail" style="width:100%; object-fit:cover;">
-                </div>
-              </div>
-              <div class="col-md-7 mt-4 mt-md-0">
-                <h3 class="mb-3">Retail</h3>
-                <p>Empaques que combinan funcionalidad y presentación para exhibición, protección y posicionamiento de marca.</p>
-                <ul class="pq-list-check">
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Puntos de venta</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>Artículos comerciales</li>
-                  <li><i class="ion-android-checkmark-circle text-primary me-2"></i>E-commerce</li>
-                </ul>
-                <div class="widget mt-4">
-                  <a class="pq-button pq-button-flat" href="contacto.html">
-                      <span class="pq-button-text">Cotizar Retail</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div> 
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Service Single -->
-    <section class="service-single">
+    <section class="service-single" style="padding-top: 30px;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-10">
@@ -460,7 +450,7 @@
                     
                     <div class="row pq-mb-45">
                         <div class="col-lg-12 text-center">
-                            <h3 class="mb-3">EMPAQUES QUE SE ADAPTAN A CADA INDUSTRIA</h3>
+                            <h3 class="mb-3">COBERTURA NACIONAL</h3>
                         </div>
                     </div>
 
@@ -646,10 +636,7 @@
         </div>
     </div>
 </section>
-    <!-- Service Single -->
-
-<!-- Clientes -->
-<section id="clientes-section" class="work pq-bg-dark pq-bg-img-4 wow animated fadeInUp" style="padding-bottom: 100px;">
+    <section id="clientes-section" class="work pq-bg-dark pq-bg-img-4 wow animated fadeInUp" style="padding-bottom: 100px;">
     
     <style>
         /* 1. Título principal y subtítulo en blanco */
@@ -842,10 +829,7 @@
         </div>
     </div>
 </section>
-<!-- Clientes -->
-
-    <!-- Footer -->
-   <footer id="pq-footer">
+<footer id="pq-footer">
         <div class="pq-footer-style-1">
             <div class="pq-footer-top">
                 <div class="pq-footer-bottom-list">
@@ -929,9 +913,9 @@
                             <div class="pq-footer-social">
                                 <ul>
                                     <li><a href="https://www.facebook.com/fullpacking" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/fullpackingbio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/fullpacking/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.tiktok.com/@fullpackingbio" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                    <li><a href="https://www.instagram.com/fullpackingbio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/fullpacking/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@fullpackingbio" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -943,43 +927,25 @@
             </div>
         </div>
     </footer>
-    <!-- Footer -->
-
-    <!-- Whatsapp Float -->
     <div id="whatsapp-float">
     <a class="whatsapp-btn" href="https://wa.me/593989010972" target="_blank">
         <i class="ion-social-whatsapp"></i>
     </a>
 </div>
-<!-- Whatsapp Float -->
- 
-
-    <!--jquery js-->
-    <script src="js/jquery.min.js"></script>
-    <!--bootstrap js-->
+<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!--owl-carousal-->
     <script src="js/owl.carousel.min.js"></script>
-    <!--progress-bar js-->
     <script src="js/progressbar.js"></script>
-    <!--isotope js-->
     <script src="js/isotope.pkgd.min.js"></script>
-    <!--countTo js-->
     <script src="js/jquery.countTo.min.js"></script>
-    <!--Maginfic-Popup js-->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- Animation JS -->
     <script src="js/wow.min.js"></script>
-    <!-- Simplebar js -->
     <script src="js/simplebar.min.js"></script>
-    <!-- Slick Slider js -->
     <script src="js/slick.js"></script>
-    <!-- Rev-Slider -->
     <script src="rev/js/rbtools.min.js"></script>
     <script src="rev/js/rs6.min.js"></script>
     <script src="js/rev-custom.js"></script>
 
-    <!--custom js-->
     <script src="js/custom.js"></script>
 
     <script>
