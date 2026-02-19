@@ -53,9 +53,9 @@
             <i class="ion-android-close"></i>
         </a>
     </div>
-    <div class="pq-sidebar-block mCustomScrollbar" data-simplebar>
-        <div class="pq-sidebar-header">
-            <img src="images/logos/sidebar-logo.png" class="pq-sidebar-logo img-fluid" alt="Fullpacking Sidebar Logo">
+   <div class="pq-sidebar-block mCustomScrollbar" data-simplebar>
+        <div class="pq-sidebar-header text-center">
+            <img src="images/logos/sidebar-logo.png" class="pq-sidebar-logo img-fluid mx-auto d-block" alt="Fullpacking Sidebar Logo">
         </div>
         <div class="pq-sidebar-content">
             <p>Ofrecemos soluciones de empaque 100% ecológicas y biodegradables. Innovamos para conservar la frescura de tus productos mientras protegemos el planeta.</p>
@@ -390,14 +390,19 @@
 
     <div class="container" style="position: relative; z-index: 1;">
         
-        <div class="row align-items-stretch">
+        <div class="row align-items-center">
 
             <div class="col-xl-6 mb-4 mb-xl-0">
-                <div class="pq-text-box h-100 d-flex flex-column justify-content-center" style="background-color: #478b2c; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="pq-text-box d-flex flex-column justify-content-center" style="background-color: #478b2c; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     
-                    <div class="pq-section-title pq-style-1 pq-mb-20">
-                        <span class="pq-section-sub-title" style="color: #ffffff !important;">FullPacking:</span>
-                        <h5 class="pq-section-main-title" style="color: #ffffff !important;">Donde el empaque se vuelve valor</h5>
+                    <div class="d-flex justify-content-between align-items-start pq-mb-20">
+                        <div class="pq-section-title pq-style-1 mb-0">
+                            <span class="pq-section-sub-title" style="color: #ffffff !important;">FullPacking:</span>
+                            <h5 class="pq-section-main-title" style="color: #ffffff !important;">Conócenos más</h5>
+                        </div>
+                        <div>
+                            <img src="images/logos/eco-logo.png" alt="Eco Logo Fullpacking" style="max-height: 70px; width: auto;">
+                        </div>
                     </div>
 
                     <div class="pq-section-description">
@@ -1020,6 +1025,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="pq-background-img-item">
                                 <div class="pq-background-link">
                                     <a class="pq-background-img-number" href="catalogo.html">03</a>
@@ -1181,6 +1187,13 @@
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
             pointer-events: auto !important; /* El botón SÍ necesita recibir clics */
         }
+
+        /* --- NUEVO: Color naranja para el icono activo (-) del acordeón --- */
+        .pq-accordion-box.pq-active .ad-title-text i {
+            background-color: #f18a00 !important;
+            border-color: #f18a00 !important;
+            color: #ffffff !important;
+        }
     </style>
 
     <div class="ba-slider" id="ba-slider">
@@ -1278,7 +1291,7 @@
                     <div class="pq-accordion-box pq-active 1">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                01 Calidad
+                                1. Calidad
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
@@ -1297,7 +1310,7 @@
                     <div class="pq-accordion-box 2">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                02 Temperaturas
+                                2. Temperaturas
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
@@ -1312,7 +1325,7 @@
                     <div class="pq-accordion-box 3">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                03 Barrera Funcional y Sanitaria
+                                3. Barrera Funcional y Sanitaria
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
@@ -1331,7 +1344,7 @@
                     <div class="pq-accordion-box 4">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                04 Bioseguridad e Inocuidad
+                                4. Bioseguridad e Inocuidad
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
@@ -1346,7 +1359,7 @@
                     <div class="pq-accordion-box 5">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                05 Optimización
+                                5. Optimización
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
@@ -1364,7 +1377,7 @@
                     <div class="pq-accordion-box 6">
                         <div class="pq-ad-title">
                             <h4 class="ad-title-text">
-                                06 Desempeño en Cuartos Fríos ❄️
+                                6. Desempeño en Cuartos Fríos 
                                 <i aria-hidden="true" class="ion ion-plus active"></i>
                                 <i aria-hidden="true" class=" ti-minus inactive"></i>
                             </h4>
