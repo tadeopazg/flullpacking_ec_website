@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullpacking - Bolsa Bolón</title>
+    <title>Fullpacking - Bolsas Porta Cubiertos</title>
     <link rel="shortcut icon" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/owl.carousel.min.css" />
@@ -18,24 +18,29 @@
     <link rel="stylesheet" href="../css/responsive.css" />
 
     <style>
+        /* Evitar que salga el "1." en el Breadcrumb */
+        .breadcrumb-item {
+            list-style-type: none !important;
+        }
+
         /* --- EL RIBBON CON TU BANNER NUEVO --- */
         .pq-breadcrumb-ribbon {
             padding: 160px 0 50px 0; 
             background-color: #f8f9fa;
-            background-image: url('../images/background-images/banner-producto.jpg'); /* Tu banner en PS */
+            background-image: url('../images/background-images/banner-producto.jpg'); 
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             position: relative;
             z-index: 10;
-            border-bottom: 4px solid #478b2c; /* Línea verde decorativa */
+            border-bottom: 4px solid #478b2c; 
         }
 
         /* --- LA SECCIÓN DEL PRODUCTO CON LA TEXTURA --- */
         .pq-product-section {
             padding-top: 60px; 
             padding-bottom: 60px; 
-            background-image: url('../images/background-images/textura-bg.jpg'); /* La textura tipo papel/cartón */
+            background-image: url('../images/background-images/textura-bg.jpg'); 
             background-size: cover; 
             background-position: center;
         }
@@ -101,14 +106,14 @@
             box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
         }
 
-        /* Estilo de las mini-cards blancas */
+        /* Estilo de las mini-cards blancas (4 CARACTERÍSTICAS) */
         .char-card {
             background-color: #ffffff;
             border-radius: 8px;
             padding: 15px 10px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(50% - 20px); 
             margin: 10px;
             transition: transform 0.3s ease;
         }
@@ -126,6 +131,31 @@
             color: #333 !important; 
             font-size: 18px; 
             font-weight: 700;
+        }
+
+        /* --- SELECTOR DESPLEGABLE CORREGIDO --- */
+        .custom-size-selector {
+            width: 100%;
+            max-width: 400px;
+            height: 45px; 
+            padding: 0 20px; 
+            border-radius: 30px;
+            border: 2px solid #478b2c;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 14px; 
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            text-align-last: center;
+            line-height: 41px; 
+        }
+        .custom-size-selector:hover, .custom-size-selector:focus {
+            border-color: #333;
+            background-color: #f8f9fa;
         }
     </style>
   </head>
@@ -240,13 +270,13 @@
         <div class="row align-items-center">
           <div class="col-lg-12 text-center">
             
-            <h1 style="color: #ffffff; font-weight: 800; font-size: 46px; margin-bottom: 10px;">Bolsa Bolón</h1>
+            <h1 style="color: #ffffff; font-weight: 800; font-size: 46px; margin-bottom: 10px;">Bolsas Porta Cubiertos</h1>
             
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center" style="background: transparent; padding: 0; margin: 0; font-size: 16px;">
                 <li class="breadcrumb-item"><a href="../index.html" style="color: #ffffff;"><i class="fas fa-home mr-2"></i>Inicio</a></li>
                 <li class="breadcrumb-item"><a href="../catalogo.html" style="color: #ffffff;">Catálogo</a></li>
-                <li class="breadcrumb-item active" style="color: #ffffff; font-weight: 700;">Bolsa Bolón</li>
+                <li class="breadcrumb-item active" style="color: #ffffff; font-weight: 700;">Bolsas Porta Cubiertos</li>
               </ol>
             </nav>
 
@@ -265,28 +295,40 @@
             <div class="pq-carousel-wrapper">
                 <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="true" data-desk_num="1" data-lap_num="1" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true" data-loop="true" data-margin="0" data-autoplay-timeout="6000" data-smart-speed="1000">
                   <div class="item text-center">
-                    <img src="../images/producto/p03084-1/1.jpg" class="img-fluid pq-product-carousel-img" alt="Bolsa Bolón Vista 1" />
+                    <img src="../images/producto/P01692/1.jpg" class="img-fluid pq-product-carousel-img" alt="Bolsas Porta Cubiertos Vista 1" />
                   </div>
                   <div class="item text-center">
-                    <img src="../images/producto/p03084-1/2.jpg" class="img-fluid pq-product-carousel-img" alt="Bolsa Bolón Vista 2" />
+                    <img src="../images/producto/P01692/2.jpg" class="img-fluid pq-product-carousel-img" alt="Bolsas Porta Cubiertos Vista 2" />
                   </div>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center flex-wrap mt-auto pt-4">
-                <div class="pq-btn-container m-2"> 
-                    <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
-                        <span class="pq-button-text">Volver</span>
-                    </a>
+            <div class="mt-auto pt-4 w-100">
+                <div class="d-flex justify-content-center mb-3">
+                    <select id="sizeSelector" class="custom-size-selector">
+                        <option value="A">8.33 x 26 cm - Color Blanco</option>
+                        <option value="B">8.33 x 26 cm - Color Kraft</option>
+                        <option value="C">8.33 x 26 cm - Color Natural</option>
+                        <option value="D">8.33 x 19 cm - Color Kraft</option>
+                        <option value="E">8.30 x 19 cm - Color Blanco</option>
+                    </select>
                 </div>
-                
-                <div class="pq-btn-container m-2">
-                    <a href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01191%20-%20Bolsa%20Hamburguesa" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
-                        <div class="pq-button-block">
-                            <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
-                            <span class="pq-button-text">Contactar Ventas</span>
-                        </div>
-                    </a>
+
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="pq-btn-container m-2"> 
+                        <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
+                            <span class="pq-button-text">Volver</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pq-btn-container m-2">
+                        <a id="waButton" href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01692%20-%20Bolsas%20Porta%20Cubiertos%20(8.33%20x%2026%20cm%20-%20Blanco)" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
+                            <div class="pq-button-block">
+                                <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
+                                <span class="pq-button-text">Contactar Ventas</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -300,26 +342,26 @@
               <div class="d-flex flex-wrap justify-content-between mb-4">
                 <div class="char-card">
                   <h5>Ancho (cm)</h5>
-                  <span>15.00</span>
+                  <span id="charAncho">8.33</span>
                 </div>
                 <div class="char-card">
                   <h5>Largo (cm)</h5>
-                  <span>17.00</span>
+                  <span id="charLargo">26.00</span>
                 </div>
                 <div class="char-card">
                   <h5>Material</h5>
-                  <span>Tecnipack</span>
+                  <span id="charMaterial">Tecnipack</span>
                 </div>
                 <div class="char-card">
                   <h5>Color</h5>
-                  <span>Blanco</span>
+                  <span id="charColor">Blanco</span>
                 </div>
               </div>
 
               <div style="border-top: 1px solid rgba(255,255,255,0.3); padding-top: 30px; margin-top: auto;" class="text-center">
                   <h4 class="mb-3" style="color: #ffffff; font-size: 22px;">Principales Usos</h4>
                   <p style="color: #f1f1f1; line-height: 1.6; font-size: 17px; margin-bottom: 0;">
-                      Ideal para bolones, corviches, papas fritas, entre otros.
+                      Ideal para empacar los cubiertos usados en los restaurantes o delivery.
                   </p>
               </div>
             </div>
@@ -442,7 +484,8 @@
         <i class="ion-social-whatsapp"></i>
     </a>
 </div>
-<script src="../js/jquery.min.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/progressbar.js"></script>
@@ -452,5 +495,48 @@
     <script src="../js/wow.min.js"></script>
     <script src="../js/simplebar.min.js"></script>
     <script src="../js/custom.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var selector = document.getElementById('sizeSelector');
+            var charAncho = document.getElementById('charAncho');
+            var charLargo = document.getElementById('charLargo');
+            var charMaterial = document.getElementById('charMaterial');
+            var charColor = document.getElementById('charColor');
+            var waButton = document.getElementById('waButton');
+
+            var baseUrl = "https://wa.me/+593989010972?text=";
+            var baseText = "Hola, estoy interesado en el producto P01692 - Bolsas Porta Cubiertos ";
+
+            selector.addEventListener('change', function() {
+                if (this.value === 'A') {
+                    charAncho.textContent = '8.33';
+                    charLargo.textContent = '26.00';
+                    charColor.textContent = 'Blanco';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Blanco)");
+                } else if (this.value === 'B') {
+                    charAncho.textContent = '8.33';
+                    charLargo.textContent = '26.00';
+                    charColor.textContent = 'Kraft';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Kraft)");
+                } else if (this.value === 'C') {
+                    charAncho.textContent = '8.33';
+                    charLargo.textContent = '26.00';
+                    charColor.textContent = 'Natural';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Natural)");
+                } else if (this.value === 'D') {
+                    charAncho.textContent = '8.33';
+                    charLargo.textContent = '19.00';
+                    charColor.textContent = 'Kraft';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 19 cm - Kraft)");
+                } else if (this.value === 'E') {
+                    charAncho.textContent = '8.30';
+                    charLargo.textContent = '19.00';
+                    charColor.textContent = 'Blanco';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.30 x 19 cm - Blanco)");
+                }
+            });
+        });
+    </script>
   </body>
 </html>
