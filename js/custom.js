@@ -403,7 +403,7 @@
     [ Background Image Hover ]
     ==================================================*/
 
-    jQuery('.pq-background-img-item').eq(1).addClass("active");
+    jQuery('.pq-background-img-item').eq(0).addClass("active"); // Cambiado de 1 a 0
     jQuery(".pq-background-img-item").on('click',function(){
       jQuery('.pq-background-img-item').removeClass("active");
       jQuery(this).addClass("active");
