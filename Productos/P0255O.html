@@ -106,7 +106,7 @@
             box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
         }
 
-        /* Estilo de las mini-cards blancas (5 CARACTERÍSTICAS) */
+        /* Estilo de las mini-cards blancas */
         .char-card {
             background-color: #ffffff;
             border-radius: 8px;
@@ -306,12 +306,13 @@
             <div class="mt-auto pt-4 w-100">
                 <div class="d-flex justify-content-center mb-3">
                     <select id="sizeSelector" class="custom-size-selector">
-                        <option value="1">Funda 1 (9 x 20 x 4 cm)</option>
-                        <option value="2">Funda 2 (10.5 x 22 x 4 cm)</option>
-                        <option value="3">Funda 3 (11 x 26 x 4 cm)</option>
-                        <option value="4">Funda 4 (14.2 x 30 x 5 cm)</option>
-                        <option value="5">Funda 5 (18.2 x 39 x 5.5 cm)</option>
-                        <option value="6">Funda 6 (10 x 60 x 4 cm)</option>
+                        <option value="1">Funda Tipo #1 (9 x 20 x 4 cm)</option>
+                        <option value="2">Funda Tipo #2 (10.5 x 22 x 4 cm)</option>
+                        <option value="3">Funda Tipo #3 (11 x 26 x 4 cm)</option>
+                        <option value="4">Funda Tipo #4 (14.2 x 30 x 5 cm)</option>
+                        <option value="5">Funda Tipo #5 (15 + FL4+4 x 30 cm)</option>
+                        <option value="6">Funda Tipo #6 (18.2 x 39 x 5.5 cm)</option>
+                        <option value="baguette">Funda Baguette (10 x 60 x 4 cm)</option>
                     </select>
                 </div>
 
@@ -323,7 +324,7 @@
                     </div>
                     
                     <div class="pq-btn-container m-2">
-                        <a id="waButton" href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P0255O%20-%20Bolsas%20Masivas%20(Funda%201)" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
+                        <a id="waButton" href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P0255O%20-%20Bolsas%20Masivas%20(Funda%20Tipo%20%231:%209x20x4%20cm)" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
                             <div class="pq-button-block">
                                 <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
                                 <span class="pq-button-text">Contactar Ventas</span>
@@ -355,7 +356,7 @@
                 </div>
                 <div class="char-card" style="flex: 1 1 calc(50% - 20px);">
                   <h5>Material</h5>
-                  <span>Teknipack</span>
+                  <span>Tecnipack 2308</span>
                 </div>
                 <div class="char-card" style="flex: 1 1 calc(50% - 20px);">
                   <h5>Color</h5>
@@ -366,7 +367,7 @@
               <div style="border-top: 1px solid rgba(255,255,255,0.3); padding-top: 30px; margin-top: auto;" class="text-center">
                   <h4 class="mb-3" style="color: #ffffff; font-size: 22px;">Principales Usos</h4>
                   <p style="color: #f1f1f1; line-height: 1.6; font-size: 17px; margin-bottom: 0;">
-                      Ideal para para pan, sánduches, bizcochos, pan baguette, postres, entre otros.
+                      Ideal para pan, sánduches, bizcochos, pan baguette, postres, entre otros.
                   </p>
               </div>
             </div>
@@ -517,32 +518,37 @@
                     charAncho.textContent = '9.00';
                     charLargo.textContent = '20.00';
                     charFuelle.textContent = '4.00';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 1: 9x20x4 cm)");
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #1: 9x20x4 cm)");
                 } else if (this.value === '2') {
                     charAncho.textContent = '10.50';
                     charLargo.textContent = '22.00';
                     charFuelle.textContent = '4.00';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 2: 10.5x22x4 cm)");
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #2: 10.5x22x4 cm)");
                 } else if (this.value === '3') {
                     charAncho.textContent = '11.00';
                     charLargo.textContent = '26.00';
                     charFuelle.textContent = '4.00';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 3: 11x26x4 cm)");
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #3: 11x26x4 cm)");
                 } else if (this.value === '4') {
                     charAncho.textContent = '14.20';
                     charLargo.textContent = '30.00';
                     charFuelle.textContent = '5.00';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 4: 14.2x30x5 cm)");
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #4: 14.2x30x5 cm)");
                 } else if (this.value === '5') {
+                    charAncho.textContent = '15.00';
+                    charLargo.textContent = '30.00';
+                    charFuelle.textContent = '4.00';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #5: 15 + FL4+4 x 30 cm)");
+                } else if (this.value === '6') {
                     charAncho.textContent = '18.20';
                     charLargo.textContent = '39.00';
                     charFuelle.textContent = '5.50';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 5: 18.2x39x5.5 cm)");
-                } else if (this.value === '6') {
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Tipo #6: 18.2x39x5.5 cm)");
+                } else if (this.value === 'baguette') {
                     charAncho.textContent = '10.00';
                     charLargo.textContent = '60.00';
                     charFuelle.textContent = '4.00';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda 6: 10x60x4 cm)");
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Funda Baguette: 10x60x4 cm)");
                 }
             });
         });

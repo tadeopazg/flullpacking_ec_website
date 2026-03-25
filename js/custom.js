@@ -1,10 +1,3 @@
-/*
-Template: Textica - Textile & Fabric Industry HTML Template
-Author: peacefulqode.com
-Version: 1.0
-Design and Developed by: PeacefulQode
-
-*/
 
 /*================================================
 [  Table of contents  ]
@@ -35,6 +28,8 @@ Design and Developed by: PeacefulQode
 
 (function (jQuery) {
     "use strict";
+    
+    // ENGLOBAR LOADERS Y CARROUSELES AQUÍ PARA EVITAR QUE COLAPSEN
     jQuery(window).on('load', function (e) {
 
         /*==================================================
@@ -46,74 +41,7 @@ Design and Developed by: PeacefulQode
         var Scrollbar = window.Scrollbar;
 
         /*==================================================
-        [ Search Button ]
-        ==================================================*/
-        jQuery('#pq-seacrh-btn').on('click', function () {
-            jQuery('.pq-search-form').slideToggle();
-            jQuery('.pq-search-form').toggleClass('pq-form-show');
-            if (jQuery('.pq-search-form').hasClass("pq-form-show")) {
-                jQuery(this).html('<i class="ti-close"></i>');
-            } else {
-                jQuery(this).html('<i class="ti-search"></i>');
-            }
-        });
-
-        /*==================================================
-        [ Accordion ]
-        ==================================================*/
-        jQuery('.pq-accordion-block .pq-accordion-box .pq-accordion-details').hide();
-        jQuery('.pq-accordion-block .pq-accordion-box:first').addClass('pq-active').children().slideDown('slow');
-        jQuery('.pq-accordion-block .pq-accordion-box').on("click", function () {
-            if (jQuery(this).children('div.pq-accordion-details').is(':hidden')) {
-                jQuery('.pq-accordion-block .pq-accordion-box').removeClass('pq-active').children('div.pq-accordion-details').slideUp('slow');
-                jQuery(this).toggleClass('pq-active').children('div.pq-accordion-details').slideDown('slow');
-            }
-        });
-
-        /*==================================================
-        [ Sidebar Toggle ]
-        ==================================================*/
-        jQuery("#pq-toggle-btn").on('click', function () {
-            jQuery('#pq-sidebar-menu-contain').toggleClass("active");
-        });
-        jQuery('.pq-toggle-btn').on('click',function () {
-            jQuery('body').addClass('pq-siderbar-open');
-        });
-        jQuery('.pq-close').on('click',function () {
-            jQuery('body').removeClass('pq-siderbar-open');
-        });
-
-        /*==================================================
-        [ Sticky Header ]
-        ==================================================*/
-        var view_width = jQuery(window).width();
-        if (!jQuery('header').hasClass('pq-header-default') && view_width >= 1023) {
-            var height = jQuery('header').height();
-            jQuery('.pq-breadcrumb').css('padding-top', height * 2);
-        }
-        if (jQuery('header').hasClass('pq-header-default')) {
-            jQuery(window).scroll(function () {
-                var scrollTop = jQuery(window).scrollTop();
-                if (scrollTop > 300) {
-                    jQuery('.pq-bottom-header').addClass('pq-header-sticky animated fadeInDown animate__faster');
-                } else {
-                    jQuery('.pq-bottom-header').removeClass('pq-header-sticky animated fadeInDown animate__faster');
-                }
-            });
-        }
-        if (jQuery('header').hasClass('pq-has-sticky')) {
-            jQuery(window).scroll(function () {
-                var scrollTop = jQuery(window).scrollTop();
-                if (scrollTop > 300) {
-                    jQuery('.pq-bottom-header').addClass('pq-header-sticky animated fadeInDown animate__faster');
-                } else {
-                    jQuery('.pq-bottom-header').removeClass('pq-header-sticky animated fadeInDown animate__faster');
-                }
-            });
-        }
-
-        /*==================================================
-        [ Slick Slider ]
+        [ Slick Slider ] (MOVIDO DENTRO DEL WINDOW LOAD)
         ==================================================*/
 
         if (jQuery('.slick-slider-main').length) {
@@ -161,7 +89,7 @@ Design and Developed by: PeacefulQode
         }
 
         /*==================================================
-        [ Owl Carousel ]
+        [ Owl Carousel ] (MOVIDO DENTRO DEL WINDOW LOAD)
         ==================================================*/
 
         jQuery('.owl-carousel').each(function () {
@@ -234,7 +162,75 @@ Design and Developed by: PeacefulQode
                 2000
             );
         });
+    }); // FIN DEL WINDOW LOAD
+
+
+    /*==================================================
+    [ Search Button ]
+    ==================================================*/
+    jQuery('#pq-seacrh-btn').on('click', function () {
+        jQuery('.pq-search-form').slideToggle();
+        jQuery('.pq-search-form').toggleClass('pq-form-show');
+        if (jQuery('.pq-search-form').hasClass("pq-form-show")) {
+            jQuery(this).html('<i class="ti-close"></i>');
+        } else {
+            jQuery(this).html('<i class="ti-search"></i>');
+        }
     });
+
+    /*==================================================
+    [ Accordion ]
+    ==================================================*/
+    jQuery('.pq-accordion-block .pq-accordion-box .pq-accordion-details').hide();
+    jQuery('.pq-accordion-block .pq-accordion-box:first').addClass('pq-active').children().slideDown('slow');
+    jQuery('.pq-accordion-block .pq-accordion-box').on("click", function () {
+        if (jQuery(this).children('div.pq-accordion-details').is(':hidden')) {
+            jQuery('.pq-accordion-block .pq-accordion-box').removeClass('pq-active').children('div.pq-accordion-details').slideUp('slow');
+            jQuery(this).toggleClass('pq-active').children('div.pq-accordion-details').slideDown('slow');
+        }
+    });
+
+    /*==================================================
+    [ Sidebar Toggle ]
+    ==================================================*/
+    jQuery("#pq-toggle-btn").on('click', function () {
+        jQuery('#pq-sidebar-menu-contain').toggleClass("active");
+    });
+    jQuery('.pq-toggle-btn').on('click',function () {
+        jQuery('body').addClass('pq-siderbar-open');
+    });
+    jQuery('.pq-close').on('click',function () {
+        jQuery('body').removeClass('pq-siderbar-open');
+    });
+
+    /*==================================================
+    [ Sticky Header ]
+    ==================================================*/
+    var view_width = jQuery(window).width();
+    if (!jQuery('header').hasClass('pq-header-default') && view_width >= 1023) {
+        var height = jQuery('header').height();
+        jQuery('.pq-breadcrumb').css('padding-top', height * 2);
+    }
+    if (jQuery('header').hasClass('pq-header-default')) {
+        jQuery(window).scroll(function () {
+            var scrollTop = jQuery(window).scrollTop();
+            if (scrollTop > 300) {
+                jQuery('.pq-bottom-header').addClass('pq-header-sticky animated fadeInDown animate__faster');
+            } else {
+                jQuery('.pq-bottom-header').removeClass('pq-header-sticky animated fadeInDown animate__faster');
+            }
+        });
+    }
+    if (jQuery('header').hasClass('pq-has-sticky')) {
+        jQuery(window).scroll(function () {
+            var scrollTop = jQuery(window).scrollTop();
+            if (scrollTop > 300) {
+                jQuery('.pq-bottom-header').addClass('pq-header-sticky animated fadeInDown animate__faster');
+            } else {
+                jQuery('.pq-bottom-header').removeClass('pq-header-sticky animated fadeInDown animate__faster');
+            }
+        });
+    }
 
     /*==================================================
     [ Back To Top ]

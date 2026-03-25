@@ -132,6 +132,31 @@
             font-size: 18px; 
             font-weight: 700;
         }
+
+        /* --- SELECTOR DESPLEGABLE --- */
+        .custom-size-selector {
+            width: 100%;
+            max-width: 400px;
+            height: 45px; 
+            padding: 0 20px; 
+            border-radius: 30px;
+            border: 2px solid #478b2c;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 14px; 
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            text-align-last: center;
+            line-height: 41px; 
+        }
+        .custom-size-selector:hover, .custom-size-selector:focus {
+            border-color: #333;
+            background-color: #f8f9fa;
+        }
     </style>
   </head>
   <body>
@@ -275,20 +300,32 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center flex-wrap mt-auto pt-4">
-                <div class="pq-btn-container m-2"> 
-                    <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
-                        <span class="pq-button-text">Volver</span>
-                    </a>
+            <div class="mt-auto pt-4 w-100">
+                <div class="d-flex justify-content-center mb-3">
+                    <select id="sizeSelector" class="custom-size-selector">
+                        <option value="rojos">Bolsillo Cuadros Rojos</option>
+                        <option value="negros">Bolsillo Cuadros Negros</option>
+                        <option value="amarillos">Bolsillo Cuadros Amarillos</option>
+                        <option value="azules">Bolsillo Cuadros Azules</option>
+                        <option value="verdes">Bolsillo Cuadros Verdes</option>
+                    </select>
                 </div>
-                
-                <div class="pq-btn-container m-2">
-                    <a href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01269%20-%20Bolsillo%20Cuadros" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
-                        <div class="pq-button-block">
-                            <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
-                            <span class="pq-button-text">Contactar Ventas</span>
-                        </div>
-                    </a>
+
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="pq-btn-container m-2"> 
+                        <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
+                            <span class="pq-button-text">Volver</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pq-btn-container m-2">
+                        <a id="waButton" href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01269%20-%20Bolsillo%20Cuadros%20Rojos" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
+                            <div class="pq-button-block">
+                                <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
+                                <span class="pq-button-text">Contactar Ventas</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -310,11 +347,11 @@
                 </div>
                 <div class="char-card">
                   <h5>Material</h5>
-                  <span>Tecnipack</span>
+                  <span>Paper Tecnipack</span>
                 </div>
                 <div class="char-card">
                   <h5>Color</h5>
-                  <span>Blanco</span>
+                  <span id="charColor">Rojo</span>
                 </div>
               </div>
 
@@ -454,5 +491,34 @@
     <script src="../js/wow.min.js"></script>
     <script src="../js/simplebar.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var selector = document.getElementById('sizeSelector');
+            var charColor = document.getElementById('charColor');
+            var waButton = document.getElementById('waButton');
+
+            var baseUrl = "https://wa.me/+593989010972?text=";
+            var baseText = "Hola, estoy interesado en el producto P01269 - Bolsillo Cuadros ";
+
+            selector.addEventListener('change', function() {
+                if (this.value === 'rojos') {
+                    charColor.textContent = 'Rojo';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "Rojos");
+                } else if (this.value === 'negros') {
+                    charColor.textContent = 'Negro';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "Negros");
+                } else if (this.value === 'amarillos') {
+                    charColor.textContent = 'Amarillo';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "Amarillos");
+                } else if (this.value === 'azules') {
+                    charColor.textContent = 'Azul';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "Azules");
+                } else if (this.value === 'verdes') {
+                    charColor.textContent = 'Verde';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "Verdes");
+                }
+            });
+        });
+    </script>
   </body>
 </html>

@@ -132,6 +132,31 @@
             font-size: 18px; 
             font-weight: 700;
         }
+
+        /* --- SELECTOR DESPLEGABLE --- */
+        .custom-size-selector {
+            width: 100%;
+            max-width: 400px;
+            height: 45px; 
+            padding: 0 20px; 
+            border-radius: 30px;
+            border: 2px solid #478b2c;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 14px; 
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            text-align-last: center;
+            line-height: 41px; 
+        }
+        .custom-size-selector:hover, .custom-size-selector:focus {
+            border-color: #333;
+            background-color: #f8f9fa;
+        }
     </style>
   </head>
   <body>
@@ -275,20 +300,29 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center flex-wrap mt-auto pt-4">
-                <div class="pq-btn-container m-2"> 
-                    <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
-                        <span class="pq-button-text">Volver</span>
-                    </a>
+            <div class="mt-auto pt-4 w-100">
+                <div class="d-flex justify-content-center mb-3">
+                    <select id="sizeSelector" class="custom-size-selector">
+                        <option value="tecnipack2308">Tecnipack 2308 (Natural)</option>
+                        <option value="papertecnipack">Paper Tecnipack (Kraft)</option>
+                    </select>
                 </div>
-                
-                <div class="pq-btn-container m-2">
-                    <a href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01660%20-%20Bolsillo%20Deli" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
-                        <div class="pq-button-block">
-                            <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
-                            <span class="pq-button-text">Contactar Ventas</span>
-                        </div>
-                    </a>
+
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="pq-btn-container m-2"> 
+                        <a href="../catalogo.html" class="pq-button pq-button-flat text-center" style="min-width: 160px; border-radius: 30px; padding: 10px 20px; background-color: #333;">
+                            <span class="pq-button-text">Volver</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pq-btn-container m-2">
+                        <a id="waButton" href="https://wa.me/+593989010972?text=Hola,%20estoy%20interesado%20en%20el%20producto%20P01660%20-%20Bolsillo%20Deli%20(Tecnipack%202308)" target="_blank" class="pq-button pq-button-flat text-center" style="min-width: 220px; border-radius: 30px; padding: 10px 20px;">
+                            <div class="pq-button-block">
+                                <i class="fab fa-whatsapp" style="font-size: 18px; margin-right: 8px;"></i>
+                                <span class="pq-button-text">Contactar Ventas</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -310,11 +344,11 @@
                 </div>
                 <div class="char-card">
                   <h5>Material</h5>
-                  <span>Tecnipack 2308</span>
+                  <span id="charMaterial">Tecnipack 2308</span>
                 </div>
                 <div class="char-card">
                   <h5>Color</h5>
-                  <span>Natural</span>
+                  <span id="charColor">Natural</span>
                 </div>
               </div>
 
@@ -454,5 +488,28 @@
     <script src="../js/wow.min.js"></script>
     <script src="../js/simplebar.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var selector = document.getElementById('sizeSelector');
+            var charMaterial = document.getElementById('charMaterial');
+            var charColor = document.getElementById('charColor');
+            var waButton = document.getElementById('waButton');
+
+            var baseUrl = "https://wa.me/+593989010972?text=";
+            var baseText = "Hola, estoy interesado en el producto P01660 - Bolsillo Deli ";
+
+            selector.addEventListener('change', function() {
+                if (this.value === 'tecnipack2308') {
+                    charMaterial.textContent = 'Tecnipack 2308';
+                    charColor.textContent = 'Natural';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Tecnipack 2308)");
+                } else if (this.value === 'papertecnipack') {
+                    charMaterial.textContent = 'Paper Tecnipack';
+                    charColor.textContent = 'Kraft';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(Paper Tecnipack)");
+                }
+            });
+        });
+    </script>
   </body>
 </html>
