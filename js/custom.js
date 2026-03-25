@@ -20,7 +20,6 @@
 ==> Map
 ==> Circle Progressbar
 
-
 ==================================================
 [ End table content ]
 ================================================*/
@@ -29,7 +28,7 @@
 (function (jQuery) {
     "use strict";
     
-    // ENGLOBAR LOADERS Y CARROUSELES AQUÍ PARA EVITAR QUE COLAPSEN
+    // ENGLOBAR TODO LO QUE DEPENDE DE IMÁGENES AQUÍ
     jQuery(window).on('load', function (e) {
 
         /*==================================================
@@ -41,7 +40,7 @@
         var Scrollbar = window.Scrollbar;
 
         /*==================================================
-        [ Slick Slider ] (MOVIDO DENTRO DEL WINDOW LOAD)
+        [ Slick Slider ] 
         ==================================================*/
 
         if (jQuery('.slick-slider-main').length) {
@@ -89,7 +88,7 @@
         }
 
         /*==================================================
-        [ Owl Carousel ] (MOVIDO DENTRO DEL WINDOW LOAD)
+        [ Owl Carousel ]
         ==================================================*/
 
         jQuery('.owl-carousel').each(function () {
@@ -124,29 +123,11 @@
                 navText: ["<i class='" + prev + "'></i>", "<i class='" + next + "'></i>"],
                 responsiveClass: true,
                 responsive: {
-                    // breakpoint from 0 up
-                    0: {
-                        items: app_slider.data("mob_sm"),
-                        nav: false,
-                        dots: false
-                    },
-                    // breakpoint from 480 up
-                    480: {
-                        items: app_slider.data("mob_num"),
-                        nav: false,
-                        dots: false
-                    },
-                    // breakpoint from 786 up
-                    786: {
-                        items: app_slider.data("tab_num")
-                    },
-                    // breakpoint from 1023 up
-                    1023: {
-                        items: app_slider.data("lap_num")
-                    },
-                    1199: {
-                        items: app_slider.data("desk_num")
-                    }
+                    0: { items: app_slider.data("mob_sm"), nav: false, dots: false },
+                    480: { items: app_slider.data("mob_num"), nav: false, dots: false },
+                    786: { items: app_slider.data("tab_num") },
+                    1023: { items: app_slider.data("lap_num") },
+                    1199: { items: app_slider.data("desk_num") }
                 }
             });
         });
@@ -156,12 +137,116 @@
         ==================================================*/
 
         jQuery(".pq-progressbar-content .show-progress").each(function () {
-            jQuery(this).animate({
-                width: jQuery(this).attr("data-width") + "%",
-            },
-                2000
-            );
+            jQuery(this).animate({ width: jQuery(this).attr("data-width") + "%" }, 2000);
         });
+
+        /*==================================================
+        [ Isotope ] (¡AQUÍ ESTÁ EL ARREGLO! MOVIDO DENTRO DE ON LOAD)
+        ==================================================*/
+
+        jQuery('.pq-masonry').isotope({
+            itemSelector: '.pq-masonry-item',
+            masonry: {
+                columnWidth: '.grid-sizer',
+            }
+        });
+        jQuery('.pq-grid').isotope({
+            itemSelector: '.pq-grid-item',
+        });
+        jQuery('.pq-filter-button-group').on('click', '.pq-filter-btn', function () {
+            var filterValue = jQuery(this).attr('data-filter');
+            console.log(filterValue);
+            jQuery('.pq-masonry').isotope({ filter: filterValue });
+            jQuery('.pq-grid').isotope({ filter: filterValue });
+            jQuery('.pq-filter-button-group .pq-filter-btn').removeClass('active');
+            jQuery(this).addClass('active');
+            updateFilterCounts();
+        });
+        var initial_items = 5;
+        var next_items = 3;
+        if (jQuery('.pq-masonry').length > 0) {
+            var initial_items = jQuery('.pq-masonry').data('initial_items');
+            var next_items = jQuery('.pq-masonry').data('next_items');
+        }
+        if (jQuery('.pq-grid').length > 0) {
+            var initial_items = jQuery('.pq-grid').data('initial_items');
+            var next_items = jQuery('.pq-grid').data('next_items');
+        }
+        function showNextItems(pagination) {
+            var itemsMax = jQuery('.visible_item').length;
+            var itemsCount = 0;
+            jQuery('.visible_item').each(function () {
+                if (itemsCount < pagination) {
+                    jQuery(this).removeClass('visible_item');
+                    itemsCount++;
+                }
+            });
+            if (itemsCount >= itemsMax) {
+                jQuery('#showMore').hide();
+            }
+            if (jQuery('.pq-masonry').length > 0) {
+                jQuery('.pq-masonry').isotope('layout');
+            }
+            if (jQuery('.pq-grid').length > 0) {
+                jQuery('.pq-grid').isotope('layout');
+            }
+        }
+        // function that hides items when page is loaded
+        function hideItems(pagination) {
+            var itemsMax = jQuery('.pq-filter-items').length;
+            var itemsCount = 0;
+            jQuery('.pq-filter-items').each(function () {
+                if (itemsCount >= pagination) {
+                    jQuery(this).addClass('visible_item');
+                }
+                itemsCount++;
+            });
+            if (itemsCount < itemsMax || initial_items >= itemsMax) {
+                jQuery('#showMore').hide();
+            }
+            if (jQuery('.pq-masonry').length > 0) {
+                jQuery('.pq-masonry').isotope('layout');
+            }
+            if (jQuery('.pq-grid').length > 0) {
+                jQuery('.pq-grid').isotope('layout');
+            }
+        }
+        jQuery('#showMore').on('click', function (e) {
+            e.preventDefault();
+            showNextItems(next_items);
+        });
+        hideItems(initial_items);
+        function updateFilterCounts() {
+            if (jQuery('.pq-masonry').length > 0) {
+                var itemElems = jQuery('.pq-masonry').isotope('getFilteredItemElements');
+            }
+            if (jQuery('.pq-grid').length > 0) {
+                var itemElems = jQuery('.pq-grid').isotope('getFilteredItemElements');
+            }
+            var count_items = jQuery(itemElems).length;
+            if (count_items > initial_items) {
+                jQuery('#showMore').show();
+            } else {
+                jQuery('#showMore').hide();
+            }
+            if (jQuery('.pq-filter-items').hasClass('visible_item')) {
+                jQuery('.pq-filter-items').removeClass('visible_item');
+            }
+            var index = 0;
+            jQuery(itemElems).each(function () {
+                if (index >= initial_items) {
+                    jQuery(this).addClass('visible_item');
+                }
+                index++;
+            });
+            if (jQuery('.pq-masonry').length > 0) {
+                jQuery('.pq-masonry').isotope('layout');
+            }
+            if (jQuery('.pq-grid').length > 0) {
+                jQuery('.pq-grid').isotope('layout');
+            }
+        }
+
     }); // FIN DEL WINDOW LOAD
 
 
@@ -253,117 +338,6 @@
 
 
     /*==================================================
-    [ Isotope ]
-    ==================================================*/
-
-    jQuery('.pq-masonry').isotope({
-        itemSelector: '.pq-masonry-item',
-        masonry: {
-            columnWidth: '.grid-sizer',
-            // gutter: 0
-        }
-    });
-    jQuery('.pq-grid').isotope({
-        itemSelector: '.pq-grid-item',
-    });
-    jQuery('.pq-filter-button-group').on('click', '.pq-filter-btn', function () {
-        var filterValue = jQuery(this).attr('data-filter');
-        console.log(filterValue);
-        jQuery('.pq-masonry').isotope({ filter: filterValue });
-        jQuery('.pq-grid').isotope({ filter: filterValue });
-        jQuery('.pq-filter-button-group .pq-filter-btn').removeClass('active');
-        jQuery(this).addClass('active');
-        updateFilterCounts();
-    });
-    var initial_items = 5;
-    var next_items = 3;
-    if (jQuery('.pq-masonry').length > 0) {
-        var initial_items = jQuery('.pq-masonry').data('initial_items');
-        var next_items = jQuery('.pq-masonry').data('next_items');
-    }
-    if (jQuery('.pq-grid').length > 0) {
-        var initial_items = jQuery('.pq-grid').data('initial_items');
-        var next_items = jQuery('.pq-grid').data('next_items');
-    }
-    function showNextItems(pagination) {
-        var itemsMax = jQuery('.visible_item').length;
-        var itemsCount = 0;
-        jQuery('.visible_item').each(function () {
-            if (itemsCount < pagination) {
-                jQuery(this).removeClass('visible_item');
-                itemsCount++;
-            }
-        });
-        if (itemsCount >= itemsMax) {
-            jQuery('#showMore').hide();
-        }
-        if (jQuery('.pq-masonry').length > 0) {
-            jQuery('.pq-masonry').isotope('layout');
-        }
-        if (jQuery('.pq-grid').length > 0) {
-            jQuery('.pq-grid').isotope('layout');
-        }
-    }
-    // function that hides items when page is loaded
-    function hideItems(pagination) {
-        var itemsMax = jQuery('.pq-filter-items').length;
-        // console.log(itemsMax);
-        var itemsCount = 0;
-        jQuery('.pq-filter-items').each(function () {
-            if (itemsCount >= pagination) {
-                jQuery(this).addClass('visible_item');
-            }
-            itemsCount++;
-        });
-        if (itemsCount < itemsMax || initial_items >= itemsMax) {
-            jQuery('#showMore').hide();
-        }
-        if (jQuery('.pq-masonry').length > 0) {
-            jQuery('.pq-masonry').isotope('layout');
-        }
-        if (jQuery('.pq-grid').length > 0) {
-            jQuery('.pq-grid').isotope('layout');
-        }
-    }
-    jQuery('#showMore').on('click', function (e) {
-        e.preventDefault();
-        showNextItems(next_items);
-    });
-    hideItems(initial_items);
-    function updateFilterCounts() {
-        // get filtered item elements
-        if (jQuery('.pq-masonry').length > 0) {
-            var itemElems = jQuery('.pq-masonry').isotope('getFilteredItemElements');
-        }
-        if (jQuery('.pq-grid').length > 0) {
-            var itemElems = jQuery('.pq-grid').isotope('getFilteredItemElements');
-        }
-        var count_items = jQuery(itemElems).length;
-        // console.log(count_items);
-        if (count_items > initial_items) {
-            jQuery('#showMore').show();
-        } else {
-            jQuery('#showMore').hide();
-        }
-        if (jQuery('.pq-filter-items').hasClass('visible_item')) {
-            jQuery('.pq-filter-items').removeClass('visible_item');
-        }
-        var index = 0;
-        jQuery(itemElems).each(function () {
-            if (index >= initial_items) {
-                jQuery(this).addClass('visible_item');
-            }
-            index++;
-        });
-        if (jQuery('.pq-masonry').length > 0) {
-            jQuery('.pq-masonry').isotope('layout');
-        }
-        if (jQuery('.pq-grid').length > 0) {
-            jQuery('.pq-grid').isotope('layout');
-        }
-    }
-
-    /*==================================================
     [ counter ]
     ==================================================*/
     jQuery('.timer').countTo();
@@ -388,9 +362,9 @@
             fixedContentPos: false
         });
 
-        jQuery('.gallery').each(function () { // the containers for all your galleries
+        jQuery('.gallery').each(function () { 
             jQuery(this).magnificPopup({
-                delegate: 'a', // the selector for gallery item
+                delegate: 'a', 
                 type: 'image',
                 gallery: {
                     enabled: true
@@ -403,7 +377,7 @@
     [ Background Image Hover ]
     ==================================================*/
 
-    jQuery('.pq-background-img-item').eq(0).addClass("active"); // Cambiado de 1 a 0
+    jQuery('.pq-background-img-item').eq(0).addClass("active");
     jQuery(".pq-background-img-item").on('click',function(){
       jQuery('.pq-background-img-item').removeClass("active");
       jQuery(this).addClass("active");
