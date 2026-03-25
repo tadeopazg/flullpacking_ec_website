@@ -306,8 +306,8 @@
                         <option value="A">8.33 x 26 cm - Color Blanco</option>
                         <option value="B">8.33 x 26 cm - Color Kraft</option>
                         <option value="C">8.33 x 26 cm - Color Natural</option>
-                        <option value="D">8.33 x 19 cm - Paper Tecnipack</option>
-                        <option value="E">8.30 x 19 cm - Paper Tecnipack</option>
+                        <option value="D">8.33 x 19 cm - Paper Tecnipack Kraft</option>
+                        <option value="E">8.33 x 19 cm - Paper Tecnipack Blanco</option>
                     </select>
                 </div>
 
@@ -347,7 +347,7 @@
                 </div>
                 <div class="char-card">
                   <h5>Material</h5>
-                  <span id="charMaterial">Tecnipack</span>
+                  <span id="charMaterial">Paper Tecnipack</span>
                 </div>
                 <div class="char-card">
                   <h5>Color</h5>
@@ -513,28 +513,33 @@
                 if (this.value === 'A') {
                     charAncho.textContent = '8.33';
                     charLargo.textContent = '26.00';
+                    charMaterial.textContent = 'Paper Tecnipack';
                     charColor.textContent = 'Blanco';
                     waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Blanco)");
                 } else if (this.value === 'B') {
                     charAncho.textContent = '8.33';
                     charLargo.textContent = '26.00';
+                    charMaterial.textContent = 'Paper Tecnipack';
                     charColor.textContent = 'Kraft';
                     waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Kraft)");
                 } else if (this.value === 'C') {
                     charAncho.textContent = '8.33';
                     charLargo.textContent = '26.00';
+                    charMaterial.textContent = 'Paper Tecnipack';
                     charColor.textContent = 'Natural';
                     waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 26 cm - Natural)");
                 } else if (this.value === 'D') {
                     charAncho.textContent = '8.33';
                     charLargo.textContent = '19.00';
-                    charColor.textContent = 'Paper Tecnipack';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 19 cm - Paper Tecnipack)");
+                    charMaterial.textContent = 'Paper Tecnipack';
+                    charColor.textContent = 'Kraft';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 19 cm - Paper Tecnipack Kraft)");
                 } else if (this.value === 'E') {
-                    charAncho.textContent = '8.30';
+                    charAncho.textContent = '8.33';
                     charLargo.textContent = '19.00';
-                    charColor.textContent = 'Paper Tecnipack';
-                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.30 x 19 cm - Paper Tecnipack)");
+                    charMaterial.textContent = 'Paper Tecnipack';
+                    charColor.textContent = 'Blanco';
+                    waButton.href = baseUrl + encodeURIComponent(baseText + "(8.33 x 19 cm - Paper Tecnipack Blanco)");
                 }
             });
         });
